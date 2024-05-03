@@ -1,0 +1,86 @@
+cname {
+    color: #202020;
+    font-weight: 600;
+}
+
+strong {
+    font-weight: 700;
+    color: #202020;
+}
+
+.policiy-body {
+    margin: 120px 50px;
+}
+
+#terms-and-conditions {
+    font-size: 14px;
+    color: #000;
+}
+
+#terms-and-conditions h1 {
+    font-size: 36px;
+}
+
+#terms-and-conditions ol {
+    list-style-type: none;
+    counter-reset: item;
+    padding: 0px 50px;
+}
+
+#terms-and-conditions h2 {
+    color: #202020;
+    font-weight: 400;
+    font-size: 27px;
+}
+
+#terms-and-conditions li {
+    display: block;
+    margin: 9px 5px;
+    font-size: 19px;
+    position: relative;
+    font-weight: 500;
+    color: rgb(118, 122, 126);
+    font-family: 'QuickSand', sans-serif;
+}
+
+#terms-and-conditions li:before {
+    position: absolute;
+    top: 0;
+    margin-left: -36px;
+    font-size: 27px;
+    content: counters(item, ".") ".";
+    counter-increment: item;
+    color: #202020;
+}
+
+#terms-and-conditions ol ol li:before {
+    position: absolute;
+    top: 0;
+    margin-left: -45px;
+    font-size: 18px;
+    content: counters(item, ".") "    ";
+    counter-increment: item;
+}
+
+#terms-and-conditions .email-link {
+    text-decoration: underline;
+    font-size: 18px;
+    color: #202020;
+}
+
+#terms-and-conditions ol~p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #313131;
+}
+
+@media only screen and (max-width: 600px) {
+    #terms-and-conditions ol {
+        padding: 0px 20px;
+    }
+    #terms-and-conditions li {
+        font-size: 16px;
+        margin: 5px 0px;
+    }
+}

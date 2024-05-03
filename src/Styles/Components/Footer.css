@@ -1,0 +1,131 @@
+.footer {
+    background-color: var(--raisin-black-1);
+    color: var(--cool-gray);
+}
+
+.footer-top {
+    padding-block-end: 60px;
+    display: grid;
+    gap: 50px;
+}
+
+.footer-list-title {
+    color: var(--white);
+    font-size: var(--fs-5);
+    font-weight: var(--fw-500);
+    margin-block-end: 20px;
+}
+
+.footer-text {
+    margin-block-end: 30px;
+}
+
+.footer .social-list {
+    gap: 12px;
+}
+
+.footer .social-link {
+    background-color: var(--onyx);
+    padding: 8px 14px;
+    border-radius: 50%;
+    transition: var(--transition-1);
+}
+
+.footer .social-link:is(:hover, :focus) {
+    background-color: var(--majorelle-blue);
+    color: var(--white);
+}
+
+.footer-link {
+    font-size: var(--fs-8);
+    margin-block-start: 15px;
+    transition: var(--transition-1);
+}
+
+.footer-link:is(:hover, :focus) {
+    color: var(--mustard);
+}
+
+.insta-post {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.insta-card {
+    position: relative;
+    border-radius: var(--radius-10);
+    overflow: hidden;
+}
+
+.insta-card .card-content {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    background-color: var(--blue-ryb_80);
+    color: var(--white);
+    font-size: 25px;
+    opacity: 0;
+    transition: var(--transition-1);
+}
+
+.insta-card:is(:hover, :focus-within) .card-content {
+    opacity: 1;
+}
+
+.footer-bottom {
+    color: var(--white);
+    font-size: var(--fs-8);
+    padding-block: 40px;
+    border-block-start: 1px solid var(--onyx);
+}
+
+.copyright {
+    margin-block-end: 15px;
+}
+
+.footer-bottom-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 15px;
+}
+
+.footer-bottom-link {
+    transition: var(--transition-1);
+}
+
+.footer-bottom-link:is(:hover, :focus) {
+    color: var(--mustard);
+}
+
+@media (min-width: 768px) {
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    .footer-bottom-list {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-top {
+        grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+        padding-block: 120px;
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .copyright {
+        margin-block-end: 0;
+    }
+}
