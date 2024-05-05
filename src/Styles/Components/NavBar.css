@@ -1,5 +1,6 @@
 .header .btn {
     display: none;
+    background-color: var(--raisin-black-1);
 }
 
 .header {
@@ -13,9 +14,11 @@
 }
 
 .header.active {
-    background-color: var(--white);
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--raisin-black-1);
+    backdrop-filter: blur(25px);
     padding-block: 15px;
-    box-shadow: var(--shadow-1);
+    box-shadow: var(--shadow-4);
 }
 
 .header .container {
@@ -25,7 +28,6 @@
 }
 
 .logo {
-    color: var(--raisin-black-1);
     font-size: 3.6rem;
     font-weight: var(--fw-700);
 }
@@ -170,7 +172,7 @@
     }
 
     .navbar-link:is(:hover, :focus) {
-        color: var(--raisin-black-1);
+        color: var(--white);
     }
 
     .navbar-link::before {
@@ -195,7 +197,7 @@
 
     .header .btn::before,
     .header .btn::after {
-        background-color: var(--raisin-black-1);
+        background-color: var(--majorelle-blue);
     }
 
     .header .btn:is(:hover, :focus) {

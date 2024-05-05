@@ -24,13 +24,13 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" exact element={<Home />} />
-        <Route path="/ContactUs" element={<Cu />} />
+        <Route path="/ContactUs" element={<ContactUs />} />
+        {/* <Route path="/ContactUs" element={<Cu />} /> */}
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/Terms&Services" element={<Terms />} />
         <Route path="/Terms&Conditions" element={<Terms />} />
         <Route path="/Refund-Policy" element={<Refund />} />
         <Route path="/Shipping-Policy" element={<Shipping />} />
-        <Route path="/Contact-Us" element={<Cu />} />
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />

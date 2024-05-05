@@ -25,7 +25,7 @@
 
 .hero-btn {
     gap: 15px;
-    color: var(--raisin-black-1);
+    color: var(--slate-gray);
     transition: var(--transition-1);
 }
 
@@ -78,7 +78,7 @@
     .hero .social-link .span {
         display: block;
         font-size: var(--fs-9);
-        color: var(--raisin-black-1);
+        color: var(--slate-gray);
         font-weight: var(--fw-700);
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -105,7 +105,7 @@
 
 @media (min-width: 992px) {
     .hero {
-        background-image: linear-gradient(to right, var(--white) 79%, var(--mustard) 79%);
+        background-image: var(--raisin-black_90);
         overflow: hidden;
     }
 

@@ -111,8 +111,8 @@ html {
 }
 
 body {
-  background-color: var(--white);
-  color: var(--slate-gray);
+  background-color: var(--black);
+  color: var(--cool-gray);
   font-size: 1.6rem;
   line-height: 1.75;
 }

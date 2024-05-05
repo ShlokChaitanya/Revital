@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
 import '../Styles/Components/NavBar.css'
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function NavBar() {
     const [isNavActive, setNavActive] = useState(false);
@@ -22,30 +22,22 @@ function NavBar() {
     return (
         <header className={`header`}>
             <div className="container">
-                <Link to="/" className="logo">Ignite Vortex</Link>
+                <Link to="/" className="logo">Lorem, ipsum.</Link>
                 <nav className={`navbar  ${isNavActive ? 'active' : ''}`}>
                     <div className="wrapper">
-                        <Link to="/" className="logo">Ignite Vortex</Link>
+                        <Link to="/" className="logo">clubit</Link>
                         <button className="nav-close-btn" aria-label="close menu" onClick={toggleNavbar}>
                             <FontAwesomeIcon icon={faBars} />
                         </button>
                     </div>
                     <ul className="navbar-list">
-                        <li className="navbar-item" onClick={() => {setNavActive(false)}}>
-                            <Link to="/?scrollTo=home" className="navbar-link" data-nav-link>Home</Link>
-                        </li>
-                        <li className="navbar-item" onClick={() => {setNavActive(false)}}>
-                            <Link to="/?scrollTo=service" className="navbar-link" data-nav-link>Services</Link>
-                        </li>
-                        <li className="navbar-item" onClick={() => {setNavActive(false)}}>
-                            <Link to="/?scrollTo=feature" className="navbar-link" data-nav-link>Features</Link>
-                        </li>
-                        <li className="navbar-item" onClick={() => {setNavActive(false)}}>
-                            <Link to="/?scrollTo=project" className="navbar-link" data-nav-link>Projects</Link>
-                        </li>
-                        <li className="navbar-item" onClick={() => {setNavActive(false)}}>
-                            <Link to="/?scrollTo=blog" className="navbar-link" data-nav-link>Blogs</Link>
-                        </li>
+                        {['Lorem', 'Lorem', 'Lorem', 'Lorem'].map((item, index) => {
+                            return (
+                                <li className="navbar-item" key={index} onClick={() => {setNavActive(false)}}>
+                                    <Link to={`/?scrollTo=${item}`} className="navbar-link" data-nav-link>{item}</Link>
+                                </li>
+                            )
+                        })}
                     </ul>
                 </nav>
                 <button className="nav-open-btn" aria-label="open menu">
