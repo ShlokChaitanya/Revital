@@ -79,7 +79,7 @@ function ContactUs() {
                 <div className="Form-Header">
                     <h1 className="Form-Title">Contact Us</h1>
                     <p className="Form-Description">
-                        Connect with Us: Embrace New Horizons and peach Your Goals Together!
+                        Connect with Us: Embrace New Horizons and Reach Your Goals Together!
                     </p>
                 </div>
                 <div className="input-container">
