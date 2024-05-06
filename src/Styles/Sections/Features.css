@@ -19,6 +19,10 @@
     transition: var(--transition-1);
 }
 
+.feature-card .card-title {
+    color: var(--jet);
+}
+
 .feature-card .card-text {
     color: var(--cool-gray);
     font-size: var(--fs-7);

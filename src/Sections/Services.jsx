@@ -50,7 +50,7 @@ function Services() {
     <section className="section service" id="service" aria-label="service">
       <div className="container">
 
-        <p className="section-subtitle has-before text-center">Our Services</p>
+        <p className="section-subtitle has-before text-center">Our Works</p>
 
         <h2 className="h2 section-title text-center">Managing you business with our <span className="has-before">best
           service</span></h2>
@@ -69,7 +69,7 @@ function Services() {
           })}
           <li>
             <a href="#" className="link-card" style={{"--color": "203, 97%, 75%"}}>
-              <span className="span">04 More Service</span>
+              <span className="span">Scroll To Top</span>
 
               <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
             </a>

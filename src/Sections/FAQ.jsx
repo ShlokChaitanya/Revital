@@ -13,8 +13,8 @@ function FAQ() {
     return (
         <section className="section FAQ-Frame">
             <div className="container">
-                <p className="section-subtitle has-before text-center">Our FAQ</p>
-                <h2 className="h2 section-title text-center">Our Frequently Asked <span className="has-before">Question</span></h2>
+                <p className="section-subtitle has-before text-center">About Us</p>
+                <h2 className="h2 section-title text-center">Some Related <span className="has-before">Questions</span></h2>
                 <div className="FAQ-Container">
                     {faqData.map((faq, index) => (
                         <div className="FAQ-Question" key={index}>

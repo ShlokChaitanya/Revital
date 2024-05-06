@@ -19,7 +19,7 @@
 
 .h2,
 .h3 {
-    color: var(--raisin-black-1);
+    color: var(--slate-gray);
 }
 
 .h2 {
@@ -159,6 +159,7 @@
 
 .section-title {
     margin-block: 30px 50px;
+    color: var(--light-gray);
 }
 
 .grid-list {

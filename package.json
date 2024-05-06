@@ -1,5 +1,5 @@
 {
-  "name": "ignite-vortex",
+  "name": "revital",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,7 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "react-scripts build && firebase deploy"
   },
   "eslintConfig": {
     "extends": [
@@ -42,5 +43,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Welcome to the Class 11th A React Website \"Revital\"! This repository contains the \"Revital\" project, created by the students of Class 11th A, specializing in PCM (Physics, Chemistry, Mathematics) and Computer Science, using the React framework. \"Revital\" serves as a representation of the students' skills and creativity in web development.",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShlokChaitanya/Revital.git"
+  },
+  "author": "Shlok Chaitanya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ShlokChaitanya/Revital/issues"
+  },
+  "homepage": "https://github.com/ShlokChaitanya/Revital#readme"
 }
