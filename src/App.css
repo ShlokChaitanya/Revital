@@ -6,8 +6,7 @@
     padding-block: var(--section-padding);
 }
 
-.h1,
-.h2 {
+.h1, .h2 {
     letter-spacing: -2px;
 }
 
@@ -17,8 +16,7 @@
     line-height: 1.1;
 }
 
-.h2,
-.h3 {
+.h2, .h3 {
     color: var(--slate-gray);
 }
 
@@ -70,8 +68,7 @@
     transition: var(--transition-2);
 }
 
-.btn::before,
-.btn::after {
+.btn::before, .btn::after {
     right: 0;
     width: 100%;
     height: 50%;
@@ -91,8 +88,7 @@
     transform-origin: right;
 }
 
-.btn:is(:hover, :focus)::before,
-.btn:is(:hover, :focus)::after {
+.btn:is(:hover, :focus)::before, .btn:is(:hover, :focus)::after {
     transform: scaleX(1);
 }
 
@@ -119,8 +115,7 @@
     gap: 15px;
 }
 
-.btn-secondary::before,
-.btn-secondary::after {
+.btn-secondary::before, .btn-secondary::after {
     background-color: var(--sky-blue-crayola);
 }
 
@@ -232,8 +227,8 @@
 @media (min-width: 1200px) {
 
     :root {
-        --fs-1: 5.5rem;
-        --fs-2: 4.5rem;
+        --fs-1: 5.5rem !important;
+        --fs-2: 4.5rem !important;
 
     }
 

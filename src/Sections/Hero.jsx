@@ -8,7 +8,7 @@ import { faSquareFacebook, faYoutube, faTwitter } from '@fortawesome/free-brands
 
 function Humo() {
     return (
-        <Spline style={{height:637, width:794}} scene="https://prod.spline.design/GP9iZQd3aRmeQ8Sm/scene.splinecode" />
+        <Spline style={{ height: 637, width: 794 }} scene="https://prod.spline.design/GP9iZQd3aRmeQ8Sm/scene.splinecode" />
     );
 }
 
@@ -21,7 +21,6 @@ function Hero() {
                     <h1 className="h1 hero-title">
                         Building Digital <span className="has-before">Product</span>, Brand and Experience
                     </h1>
-
                     <p className="hero-text">
                         At Ignite Vortex we specialize in designing, building, shipping and scaling beautiful, usable products with
                         blazing-fast

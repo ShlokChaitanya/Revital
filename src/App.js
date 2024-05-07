@@ -3,22 +3,16 @@ import NavBar from './Components/NavBar';
 import Footer from './Components/Footer';
 import Home from './Pages/Home';
 import Terms from './Pages/Terms';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PrivacyPolicy from './Pages/Privacy';
 import ContactUs from './Pages/ContactUs';
 import Refund from './Pages/Refund';
 import { useEffect } from 'react';
 import Shipping from './Pages/Shipment';
-import Cu from './Pages/CU';
+// import Cu from './Pages/CU';
 
 function App() {
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  }, [])
-
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }) }, []);
   return (
     <Router>
       <NavBar />

@@ -1,6 +1,6 @@
 .FAQ-Frame {
     /* Frame continer */
-    background-color: var(--ghost-white);
+    /* background-color: var(--ghost-white); */
 }
 
 .FAQ-Container {
@@ -13,12 +13,14 @@
 }
 
 .FAQ-Question {
-    background-color: #ffffff;
+    border-radius: 5px;
     padding: 10px 20px;
     margin-bottom: 20px;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 15px 25px rgba(0, 0, 50, 0.2);
+    backdrop-filter: blur(25px);
+    border: 1px solid var(--raisin-black-1);
+    background-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0 15px 25px rgba(0, 0, 50, 0.2);
+    -webkit-box-shadow: 0 15px 25px rgba(0, 0, 50, 0.2);
 }
 
 .Question-Toggle,
@@ -39,7 +41,7 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     font-size: var(--fs-5);
-    color: #111130;
+    color: var(--cool-gray);
     font-weight: 600;
     border: none;
     outline: none;

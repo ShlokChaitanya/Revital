@@ -1,5 +1,5 @@
 .blog {
-    background-color: var(--ghost-white);
+    /* background-color: var(--ghost-white); */
 }
 
 .blog .section-title {
@@ -25,6 +25,7 @@
     font-size: var(--fs-2);
     line-height: 1.2;
     margin-block-end: 20px;
+    color: var(--light-gray);
 }
 
 .blog-card .card-text {
@@ -78,10 +79,10 @@
 }
 
 .blog-card .card-title {
-    color: var(--raisin-black-1);
     font-size: var(--fs-4);
     letter-spacing: -1px;
     transition: var(--transition-1);
+    color: var(--light-gray);
 }
 
 .blog-card .card-title:is(:hover, :focus) {

@@ -1,5 +1,5 @@
 .service {
-    background-color: var(--ghost-white);
+    /* background-color: var(--ghost-white); */
 }
 
 .service .section-title {
@@ -14,7 +14,10 @@
 
 .service-card {
     height: 100%;
-    background-color: var(--white);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border: 1px solid var(--raisin-black-1);
+    padding-block: 15px;
     padding-block-end: 40px;
     border-block-end: 3px solid transparent;
     box-shadow: var(--shadow-3);

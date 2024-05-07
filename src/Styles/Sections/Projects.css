@@ -1,5 +1,5 @@
 .project {
-    background-color: var(--ghost-white);
+    /* background-color: var(--ghost-white); */
 }
 
 .project .section-title {
@@ -8,31 +8,35 @@
 
 .filter-list {
     max-width: 90%;
-    margin-inline: auto;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-block-end: 70px;
+    margin-bottom: 70px;
 }
 
 .filter-btn {
     color: var(--cool-gray);
     font-size: var(--fs-9);
     font-weight: var(--fw-500);
-    padding: 11px 20px;
-    border-radius: var(--radius-8);
-    transition: var(--transition-1);
+    border-radius: 20px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    margin: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.filter-btn:is(:hover, :focus) {
-    color: var(--raisin-black-1);
+.filter-btn:hover,
+.filter-btn:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--raisin-black-1);
 }
 
 .filter-btn.active {
-    background-color: var(--white);
-    color: var(--raisin-black-1);
-    box-shadow: var(--shadow-4);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--raisin-black-1);
+    color: var(--ghost-white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-card {
@@ -55,13 +59,20 @@
     top: 50%;
     left: 20px;
     right: 20px;
-    background-color: var(--mustard);
+    background-color: rgba(255, 255, 255, 0.466);
     border-radius: var(--radius-10);
     padding: 30px 20px;
     text-align: center;
     opacity: 0;
     transform: translateY(calc(-50% + 20px));
-    transition: var(--transition-2);
+    transition: transform var(--transition-2), opacity var(--transition-2);
+    backdrop-filter: blur(10px);
+}
+
+.project-card .card-content .card-title {
+    color: var(--raisin-black-1);
+    font-size: var(--fs-10);
+    font-weight: var(--fw-500);
 }
 
 .project-card .card-tag {

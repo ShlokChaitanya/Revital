@@ -2,41 +2,10 @@ import React from 'react'
 import '../Styles/Sections/Testimonials.css'
 
 const testimonials = [
-    {
-        id: 1,
-        name: 'Daniel Clifford',
-        status: 'Tech Visionary',
-        title: 'Transformative Learning Experience!',
-        quote: 'Enrolling in the bootcamp was the best decision I ever made. The curriculum was cutting-edge, and the instructors were incredibly knowledgeable. The real-world projects pushed me out of my comfort zone and prepared me for the challenges of the tech industry. I landed my dream job as a Software Engineer shortly after completing the course.'
-    },
-    {
-        id: 2,
-        name: 'Jonathan Walters',
-        status: 'Coding Enthusiast',
-        title: 'Empowering Journey into Tech',
-        quote: 'From a novice to a mobile engineer, all thanks to this bootcamp. The support from the mentors was exceptional. They kept me motivated through the tough times. The practical approach to learning made all the difference. I can confidently say that this investment transformed my career.'
-    },
-    {
-        id: 3,
-        name: 'Jeanette Harmon',
-        status: 'Tech Trailblazer',
-        title: 'Unparalleled Career Shift',
-        quote: 'Joining this bootcamp was a turning point in my life. The comprehensive curriculum equipped me with the skills demanded by the industry. The dedicated staff provided guidance at every step. I transitioned to a fulfilling tech role, and Im enjoying every moment of it.'
-    },
-    {
-        id: 4,
-        name: 'Patrick Abrams',
-        status: 'Code Connoisseur',
-        title: 'Excellence in Teaching and Support',
-        quote: 'Exceptional support from experienced TAs who have been through the same journey. Their insights were invaluable. This program instilled the confidence I needed to step into the tech world. The community is outstanding – youll receive personalized attention and connect with brilliant minds.'
-    },
-    // {
-    //     id: 5,
-    //     name: 'Kira Whittle',
-    //     status: 'Digital Dynamo',
-    //     title: 'Elevating My Skills, One Project at a Time',
-    //     quote: 'A life-altering experience that transformed me from a coding novice to a full-stack developer. The curriculum was well-structured, and the hands-on projects were game-changers. The agile team project was the highlight – it took my skills to new heights. Thanks to this bootcamp, I secured multiple job offers!'
-    // }
+    { id: 1, name: 'Daniel Clifford', status: 'Tech Visionary', title: 'Transformative Learning Experience!', quote: 'Enrolling in the bootcamp was the best decision I ever made. The curriculum was cutting-edge, and the instructors were incredibly knowledgeable. The real-world projects pushed me out of my comfort zone and prepared me for the challenges of the tech industry. I landed my dream job as a Software Engineer shortly after completing the course.' },
+    { id: 2, name: 'Jonathan Walters', status: 'Coding Enthusiast', title: 'Empowering Journey into Tech', quote: 'From a novice to a mobile engineer, all thanks to this bootcamp. The support from the mentors was exceptional. They kept me motivated through the tough times. The practical approach to learning made all the difference. I can confidently say that this investment transformed my career.' },
+    { id: 3, name: 'Jeanette Harmon', status: 'Tech Trailblazer', title: 'Unparalleled Career Shift', quote: 'Joining this bootcamp was a turning point in my life. The comprehensive curriculum equipped me with the skills demanded by the industry. The dedicated staff provided guidance at every step. I transitioned to a fulfilling tech role, and Im enjoying every moment of it.' },
+    { id: 4, name: 'Patrick Abrams', status: 'Code Connoisseur', title: 'Excellence in Teaching and Support', quote: 'Exceptional support from experienced TAs who have been through the same journey. Their insights were invaluable. This program instilled the confidence I needed to step into the tech world. The community is outstanding – youll receive personalized attention and connect with brilliant minds.' },
 ];
 
 
