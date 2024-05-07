@@ -26,7 +26,8 @@
     "eject": "react-scripts eject",
     "deploy": "react-scripts build && firebase deploy",
     "preview": "react-scripts build && firebase serve",
-    "web-preview": "react-scripts build && firebase hosting:channel:deploy web_preview"
+    "web-preview": "react-scripts build && firebase hosting:channel:deploy web_preview",
+    "setup": "npm install && firebase login && firebase init"
   },
   "eslintConfig": {
     "extends": [
