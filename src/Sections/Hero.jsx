@@ -19,7 +19,7 @@ function Hero() {
             <div className="container">
                 <div className="hero-content">
                     <h1 className="h1 hero-title">
-                        Building Digital <span className="has-before">Product</span>, Brand and Experience
+                        test <span className="has-before">Product</span>, Brand and Experience
                     </h1>
                     <p className="hero-text">
                         At Ignite Vortex we specialize in designing, building, shipping and scaling beautiful, usable products with
