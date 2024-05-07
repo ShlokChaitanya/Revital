@@ -10,9 +10,9 @@ function Footer() {
             <div className="container">
                 <div className="footer-top section">
                     <div className="footer-brand">
-                        <p className="footer-list-title">About Us</p>
+                        <p className="footer-list-title">Revital 2024.</p>
                         <p className="footer-text">
-                            A new way to make the payments easy, reliable and 100% secure. claritatem itamconse quat. Exerci tationulla
+                            This is the 2nd version of Team Revital. Initial version was released in December 2022.
                         </p>
                         <ul className="social-list">
                             <li>
