@@ -1,0 +1,129 @@
+.our-blogs-frame {
+    margin: 120px 50px;
+}
+
+.our-blogs-frame .site-content {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.post-content {
+    width: 100%;
+}
+
+.site-content .post-content>.post-image,
+.post-title {
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.site-content .post-content>.post-image .post-info {
+    background: var(--graidient02);
+    padding: 1rem;
+    position: absolute;
+    bottom: 0%;
+    left: 28%;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.site-content .post-content>.post-image>div {
+    overflow: hidden;
+}
+
+.site-content .post-content>.post-image .img {
+    width: 100%;
+    transition: all 1s ease;
+}
+
+.site-content .post-content>.post-image .img:hover {
+    transform: scale(1.3);
+}
+
+.site-content .post-content>.post-image .post-info span {
+    margin: 0 .5rem;
+}
+
+.post-content .post-title a {
+    font-family: var(--Lexend);
+    font-weight: 500;
+    font-size: 40px;
+    color: var(--sunny-yellow);
+}
+
+.post-content .post-title p {
+    font-family: var(--quick-sand);
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--white);
+}
+
+.post-content .post-title a1,
+.post-content .post-title a2,
+.post-content .post-title a3,
+.post-content .post-title a4,
+.post-content .post-title a5,
+.post-content .post-title a6 {
+    font-family: var(--quick-sand);
+    font-weight: 700;
+    color: var(--sunny-yellow);
+    text-decoration: none;
+}
+
+.post-content .post-title a1 {
+    font-size: 2.1rem;
+}
+
+.post-content .post-title a2 {
+    font-size: 2rem;
+}
+
+.post-content .post-title a3 {
+    font-size: 1.5rem;
+}
+
+.post-content .post-title a4 {
+    font-size: 1.25rem;
+}
+
+.post-content .post-title a5 {
+    font-size: 1.1rem;
+}
+
+.post-content .post-title a6 {
+    font-size: 1rem;
+}
+
+.post-content .post-title .cate {
+    font-family: var(--quick-sand);
+    font-size: 1rem;
+    color: var(--text-gray);
+    text-decoration: none;
+    display: none;
+}
+
+.site-content .post-content .post-title .post-btn {
+    border-radius: 0;
+    padding: .7rem 1.5rem;
+    background: var(--graidient02);
+}
+
+.site-content .pagination {
+    justify-content: center;
+    text-align: --webkit-center;
+    color: var(--black);
+    margin: 4rem 0;
+}
+
+.site-content .pagination a {
+    padding: .6rem .9rem;
+    border-radius: 2rem;
+    margin: 0 .3rem;
+    font-family: var(--Lexend);
+}
+
+.site-content .pagination .pages {
+    background: var(--graidient02);
+    color: var(--white);
+}

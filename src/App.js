@@ -9,6 +9,7 @@ import ContactUs from './Pages/ContactUs';
 import Refund from './Pages/Refund';
 import { useEffect } from 'react';
 import Shipping from './Pages/Shipment';
+import OurBlogs from './Pages/OurBlogs';
 // import Cu from './Pages/CU';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/Terms&Conditions" element={<Terms />} />
         <Route path="/Refund-Policy" element={<Refund />} />
         <Route path="/Shipping-Policy" element={<Shipping />} />
+        <Route path="/Blogs" element={<OurBlogs />} />
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />
