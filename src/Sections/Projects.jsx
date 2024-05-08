@@ -7,6 +7,14 @@ import Project03 from '../Assets/Images/project-3.jpg'
 import Project04 from '../Assets/Images/project-4.jpg'
 import Project05 from '../Assets/Images/project-5.jpg'
 
+const ProjectsData = [
+    
+    { image: Project02, title: "Book art design", tag: "Branding" },
+    { image: Project03, title: "Book art design", tag: "Branding" },
+    { image: Project04, title: "Book art design", tag: "Branding" },
+    { image: Project05, title: "Book art design", tag: "Branding" }
+]
+
 function Projects() {
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -19,7 +27,7 @@ function Projects() {
             <div className="container">
                 <p className="section-subtitle has-before text-center">Useful Resources</p>
                 <h2 className="h2 section-title text-center">
-                    Here are few projects gathered by us for <span className="has-before">educative purposes.</span>
+                    Here are a few projects gathered by us for <span className="has-before">educative purposes.</span>
                 </h2>
                 <ul className="filter-list">
                     {['Website', 'Landing Page', 'iOS App', 'Branding Design'].map((filter, index) => (
@@ -29,18 +37,18 @@ function Projects() {
                     ))}
                 </ul>
                 <ul className="grid-list">
-                    {[ Project02, Project03, Project04, Project05].map((project, index) => (  
+                    {ProjectsData.map((project, index) => (  
                         <li key={index} className={activeIndex === index ? 'active' : ''}>
                             <div className="project-card">
                                 <figure className="card-banner img-holder" style={{ "--width": "835", "--height": "429;" }}>
-                                    <img src={project} width="835" height="429" loading="lazy" alt="Virtual Chemistry Lab"
+                                    <img src={project.image} width="835" height="429" loading="lazy" alt="Virtual Chemistry Lab"
                                         className="img-cover" />
                                 </figure>
                                 <div className="card-content">
                                     <h3 className="h3">
-                                        <a href="https://chemcollective.org/vlab/98" className="card-title">Virtual Chemistry Lab</a>
+                                        <a href="https://chemcollective.org/vlab/98" className="card-title">{project.title}</a>
                                     </h3>
-                                    <a href="https://chemcollective.org/vlab/98" className="card-tag">By chemcollective.org</a>
+                                    <a href="https://chemcollective.org/vlab/98" className="card-tag">{project.tag}</a>
                                 </div>
                             </div>
                         </li>

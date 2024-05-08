@@ -22,7 +22,7 @@ function Hero() {
                         Welcome to <span className="has-before">Revital</span>, where Quality meets Tech.
                     </h1>
                     <p className="hero-text">
-                        Team Revital is backed up by students of Class XI - A (PCM), hailing from St. Joseph's School, Greater Noida. This page is the finest display of their skills and creativity.
+                        Team Revital is backed up by the students of Class XI - A (PCM), hailing from St. Joseph's School, Greater Noida. This page is the finest display of their skills and creativity.
                     </p>
 
                     <div className="wrapper">
