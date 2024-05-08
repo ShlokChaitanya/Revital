@@ -110,7 +110,7 @@ function Footer() {
                 <div className="footer-bottom">
 
                     <p className="copyright">
-                        &copy; 2023 Ignite Vortex. All Rights Reserved
+                        &copy; 2024 Revital. All Rights Reserved.
                     </p>
 
                     <ul className="footer-bottom-list">
@@ -121,7 +121,7 @@ function Footer() {
                             <Link to="/PrivacyPolicy" className="footer-bottom-link">Privacy policy</Link>
                         </li>
                         <li>
-                            <Link to="/Refund-Policy" className="footer-bottom-link">Refund policy</Link>
+                            <Link to="/Refund-Policy" className="footer-bottom-link">Contact us</Link>
                         </li>
                         <li>
                             <Link to="/Shipping-Policy" className="footer-bottom-link">Shipping Policy</Link>

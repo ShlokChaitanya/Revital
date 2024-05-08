@@ -7,6 +7,16 @@ import Project03 from '../Assets/Images/project-3.jpg'
 import Project04 from '../Assets/Images/project-4.jpg'
 import Project05 from '../Assets/Images/project-5.jpg'
 
+<<<<<<< HEAD
+=======
+const ProjectsData = [
+    
+    { image: Project02, title: "Book art design", tag: "Branding" },
+    { image: Project03, title: "Book art design", tag: "Branding" },
+    { image: Project04, title: "Book art design", tag: "Branding" },
+    { image: Project05, title: "Book art design", tag: "Branding" }
+]
+>>>>>>> 9cff6b5be0a61ed1b086d6ec6fa099c0939d67d4
 
 function Projects() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -18,9 +28,9 @@ function Projects() {
     return (
         <section className="section project" id="project" aria-label="project">
             <div className="container">
-                <p className="section-subtitle has-before text-center">Projects</p>
+                <p className="section-subtitle has-before text-center">Useful Resources</p>
                 <h2 className="h2 section-title text-center">
-                    Ignite Vortex complete <span className="has-before">project</span>
+                    Here are a few projects gathered by us for <span className="has-before">educative purposes.</span>
                 </h2>
                 <ul className="filter-list">
                     {['Website', 'Landing Page', 'iOS App', 'Branding Design'].map((filter, index) => (
@@ -30,18 +40,18 @@ function Projects() {
                     ))}
                 </ul>
                 <ul className="grid-list">
-                    {[ Project02, Project03, Project04, Project05].map((project, index) => (  
+                    {ProjectsData.map((project, index) => (  
                         <li key={index} className={activeIndex === index ? 'active' : ''}>
                             <div className="project-card">
                                 <figure className="card-banner img-holder" style={{ "--width": "835", "--height": "429;" }}>
-                                    <img src={project} width="835" height="429" loading="lazy" alt="Book art design"
+                                    <img src={project.image} width="835" height="429" loading="lazy" alt="Virtual Chemistry Lab"
                                         className="img-cover" />
                                 </figure>
                                 <div className="card-content">
                                     <h3 className="h3">
-                                        <a href="#" className="card-title">Book art design</a>
+                                        <a href="https://chemcollective.org/vlab/98" className="card-title">{project.title}</a>
                                     </h3>
-                                    <a href="#" className="card-tag">Branding</a>
+                                    <a href="https://chemcollective.org/vlab/98" className="card-tag">{project.tag}</a>
                                 </div>
                             </div>
                         </li>

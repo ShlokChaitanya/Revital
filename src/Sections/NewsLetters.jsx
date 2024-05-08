@@ -44,15 +44,15 @@ function NewsLetters() {
         </figure>
         <div className="newsletter-content">
 
-          <p className="section-subtitle has-before">Get every update</p>
+          <p className="section-subtitle has-before">Hear from us!</p>
 
-          <h2 className="h2 section-title">Subscribe newslater get latest updates and deals</h2>
+          <h2 className="h2 section-title">Subscribe to the newsletter and get latest tech tips.</h2>
 
           <form action="" className="newsletter-form">
-            <input type="email" name="email_address" value={email} onChange={handleEmailChange} placeholder="Enter your mail" required className="email-field" />
+            <input type="email" name="email_address" value={email} onChange={handleEmailChange} placeholder="Enter your email" required className="email-field" />
 
             <button type="submit" onClick={handleNewsletterSubmit} className="btn btn-secondary has-before has-after">
-              <span className="span">Subscribe</span>
+              <span className="span">Subscribe (coming soon)</span>
               <FontAwesomeIcon icon={faAnglesRight} />
             </button>
           </form>

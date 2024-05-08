@@ -9,13 +9,13 @@ import Image06 from '../Assets/Images/service-icon-6.png'
 import Image07 from '../Assets/Images/service-icon-7.png'
 
 const services = [
-    { id: 1, title: "Product Management", color: "174, 77%, 50%", icon: Image01 },
-    { id: 2, title: "Web & Mobile Development", color: "267, 76%, 57%", icon: Image02 },
-    { id: 3, title: "Fast Customer Support", color: "17, 100%, 68%", icon: Image03 },
-    { id: 4, title: "Human Resources", color: "343, 98%, 60%", icon: Image04 },
-    { id: 5, title: "Design and Creatives", color: "210, 100%, 53%", icon: Image05 },
-    { id: 6, title: "Marketing and Communication", color: "157, 89%, 44%", icon: Image06 },
-    { id: 7, title: "Business Development", color: "52, 98%, 50%", icon: Image07 }
+    { id: 1, title: "Fast Approach", color: "174, 77%, 50%", icon: Image01 },
+    { id: 2, title: "Web Development", color: "267, 76%, 57%", icon: Image02 },
+    { id: 3, title: "Supportive Core Team", color: "17, 100%, 68%", icon: Image03 },
+    { id: 4, title: "Related Resources", color: "343, 98%, 60%", icon: Image04 },
+    { id: 5, title: "Designing and Modifications", color: "210, 100%, 53%", icon: Image05 },
+    { id: 6, title: "Communication", color: "157, 89%, 44%", icon: Image06 },
+    { id: 7, title: "Digital Marketing", color: "52, 98%, 50%", icon: Image07 }
 ];
 
 function Services() {
@@ -24,7 +24,7 @@ function Services() {
             <div className="container">
                 <p className="section-subtitle has-before text-center">Our Works</p>
                 <h2 className="h2 section-title text-center">
-                    Managing you business with our <span className="has-before">best service</span>
+                    Helping the Tech maniacs like us step-up in the realm of <span className="has-before">Digital Age.</span>
                 </h2>
                 <ul className="grid-list">
                     {services.map((service) => {
