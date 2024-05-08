@@ -15,7 +15,7 @@ function Features() {
         </figure>
         <div className="feature-content">
           <ul className="feature-list">
-            {[{ icon: faUsers, color: "174, 77%, 50%", title: "A crew of Students.", text: "We are a group of Science Students in Grade 11, aiming to showcase our passion globally." }, { icon: faUsers, color: "241, 77%, 63%", title: "Didicated team", text: "At Ignite Vortex we specialize in designing, building, shipping and scaling beautifu." }, { icon: faHeadset, color: "343, 98%, 60%", title: "24/7 hours support", text: "At Ignite Vortex we specialize in designing, building, shipping and scaling beautifu." }].map((item, index) => {
+            {[{ icon: faUsers, color: "174, 77%, 50%", title: "A Crew of Students", text: "We are a group of Science Students in Grade 11, aiming to showcase our passion globally." }, { icon: faRocket, color: "241, 77%, 63%", title: "Project Sphere", text: "We work on collaborative, as well as on our individual projects to keep up with the portfolio." }, { icon: faHeadset, color: "343, 98%, 60%", title: "Specialized", text: "Our career choices are already defined by the theme of this page, which is, The IT Hub." }].map((item, index) => {
               return (
                 <li key={index}>
                   <div className="feature-card">

@@ -14,7 +14,7 @@ function FAQ() {
         <section className="section FAQ-Frame">
             <div className="container">
                 <p className="section-subtitle has-before text-center">About Us</p>
-                <h2 className="h2 section-title text-center">Some Related <span className="has-before">Questions</span></h2>
+                <h2 className="h2 section-title text-center">Some Related <span className="has-before">Questions.</span></h2>
                 <div className="FAQ-Container">
                     {faqData.map((faq, index) => (
                         <div className="FAQ-Question" key={index}>
@@ -35,12 +35,12 @@ function FAQ() {
 
 const faqData = [
     {
-        question: 'How can I measure the effectiveness of my digital marketing campaign?',
-        answer: 'Measuring the effectiveness of a digital marketing campaign involves analyzing key performance indicators (KPIs) such as website traffic, conversion rates, click-through rates, and social media engagement. We provide detailed analytics and reports that help you track the progress and success of your campaign.'
+        question: 'Which platforms do you use to carry out all the operations?',
+        answer: 'We have our own dedicated cloud servers to host and deploy the projects. We\'re in sponsored partnership with some leading companies in the IT field, so its going well.'
     },
     {
-        question: 'What is Digital Marketing?',
-        answer: 'Digital marketing is a practice of promoting products or services through digital channels such as search engines, social media, email, websites, mobile apps, and other digital platforms.'
+        question: 'Why the title "Revital"?',
+        answer: 'We are here to change the perceptions of people over technology and its uses. The vision we have is not about proving someone else\'s ideologies wrong, but to prove ours right.'
     },
     {
         question: 'How your business benefits from our services?',

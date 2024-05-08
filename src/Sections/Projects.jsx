@@ -7,10 +7,9 @@ import Project03 from '../Assets/Images/project-3.jpg'
 import Project04 from '../Assets/Images/project-4.jpg'
 import Project05 from '../Assets/Images/project-5.jpg'
 
-const ProjectsData = [
-    
-    { image: Project02, title: "Book art design", tag: "Branding" },
-    { image: Project03, title: "Book art design", tag: "Branding" },
+const ProjectsData = [ 
+    { image: Project02, title: "Virtual Chemistry Lab", tag: "By chemcollective.org" },
+    { image: Project03, title: "Virtual Physics Lab", tag: "Branding" },
     { image: Project04, title: "Book art design", tag: "Branding" },
     { image: Project05, title: "Book art design", tag: "Branding" }
 ]
@@ -30,7 +29,7 @@ function Projects() {
                     Here are a few projects gathered by us for <span className="has-before">educative purposes.</span>
                 </h2>
                 <ul className="filter-list">
-                    {['Website', 'Landing Page', 'iOS App', 'Branding Design'].map((filter, index) => (
+                    {['Website Resources', 'Github Projects (soon)', 'iOS App (soon)', '3D Designs (soon)'].map((filter, index) => (
                         <li key={index}>
                             <button className={`filter-btn ${activeIndex === index ? 'active' : ''}`} onClick={() => handleToggle(index)}> {filter} </button>
                         </li>
@@ -46,9 +45,9 @@ function Projects() {
                                 </figure>
                                 <div className="card-content">
                                     <h3 className="h3">
-                                        <a href="https://chemcollective.org/vlab/98" className="card-title">{project.title}</a>
+                                        <a href="https://chemcollective.org/vlab/98" target="_blank" className="card-title">{project.title}</a>
                                     </h3>
-                                    <a href="https://chemcollective.org/vlab/98" className="card-tag">{project.tag}</a>
+                                    <a href="https://chemcollective.org/vlab/98" target="_blank" className="card-tag">{project.tag}</a>
                                 </div>
                             </div>
                         </li>
