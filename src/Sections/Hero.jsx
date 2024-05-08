@@ -49,6 +49,7 @@ function Hero() {
                     </ul>
                 </div>
                 {(window.innerWidth > 1000) && <figure className="hero-banner"> <Humo /> </figure>}
+                {true && <figure className="hero-banner"> <Humo /> </figure>}
             </div>
         </section>
     )

@@ -7,6 +7,7 @@ import Project03 from '../Assets/Images/project-3.jpg'
 import Project04 from '../Assets/Images/project-4.jpg'
 import Project05 from '../Assets/Images/project-5.jpg'
 
+
 function Projects() {
     const [activeIndex, setActiveIndex] = useState(0);
 
