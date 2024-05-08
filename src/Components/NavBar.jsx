@@ -22,10 +22,10 @@ function NavBar() {
     return (
         <header className={`header`}>
             <div className="container">
-                <Link to="/" className="logo">Lorem, ipsum.</Link>
+                <Link to="/" className="logo">Revital, 2024.</Link>
                 <nav className={`navbar  ${isNavActive ? 'active' : ''}`}>
                     <div className="wrapper">
-                        <Link to="/" className="logo">clubit</Link>
+                        <Link to="/" className="logo">Revital, 2024.</Link>
                         <button className="nav-close-btn" aria-label="close menu" onClick={toggleNavbar}>
                             <FontAwesomeIcon icon={faBars} />
                         </button>

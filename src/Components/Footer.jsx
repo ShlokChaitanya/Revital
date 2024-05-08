@@ -45,8 +45,8 @@ function Footer() {
                     <div className="footer-brand">
                         <p className="footer-list-title">Address</p>
                         <p className="footer-text">
-                            C-167, Block-C, Alpha-1<br />
-                            Greater Noida, UP
+                            Greater Noida,<br />
+                            UP.
                         </p>
                     </div>
 
