@@ -19,16 +19,14 @@ function Hero() {
             <div className="container">
                 <div className="hero-content">
                     <h1 className="h1 hero-title">
-                        test <span className="has-before">Product</span>, Brand and Experience
+                        Welcome to <span className="has-before">Revital</span>, where Quality meets Tech.
                     </h1>
                     <p className="hero-text">
-                        At Ignite Vortex we specialize in designing, building, shipping and scaling beautiful, usable products with
-                        blazing-fast
-                        efficiency
+                        Team Revital is backed up by students of Class XI - A (PCM), hailing from St. Joseph's School, Greater Noida. This page is the finest display of their skills and creativity.
                     </p>
 
                     <div className="wrapper">
-                        <a href="#" className="btn btn-primary has-before has-after">How It Works</a>
+                        <a href="https://#" className="btn btn-primary has-before has-after">How It Works</a>
                         <button className="hero-btn" aria-label="Ignite Vortex promo">
                             <FontAwesomeIcon icon={faPlay} />
                             <span className="span">Behind the scenes</span>
