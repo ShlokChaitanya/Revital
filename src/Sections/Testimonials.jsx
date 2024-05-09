@@ -13,8 +13,8 @@ function Testimonials() {
     return (
         <section className="section testimonial" id="testimonial" aria-label="feature">
             <div class="container">
-                <p className="section-subtitle has-before text-center">Our Testimonials</p>
-                <h2 className="h2 section-title text-center">It's Great to listen form Our<span className="has-before">Users</span></h2>
+                <p className="section-subtitle has-before text-center">Meet The Team.</p>
+                <h2 className="h2 section-title text-center">It's Great to listen form Our<span className="has-before"> Users</span></h2>
                 <div className="testimonial-container">
                     {testimonials.map((testimonial) => (
                         <div className="testimonial-card" key={testimonial.id}>
