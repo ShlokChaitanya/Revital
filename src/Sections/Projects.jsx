@@ -7,22 +7,12 @@ import Project03 from '../Assets/Images/project-3.jpg'
 import Project04 from '../Assets/Images/project-4.jpg'
 import Project05 from '../Assets/Images/project-5.jpg'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const ProjectsData = [
-    
-    { image: Project02, title: "Book art design", tag: "Branding" },
-    { image: Project03, title: "Book art design", tag: "Branding" },
-=======
 const ProjectsData = [ 
     { image: Project02, title: "Virtual Chemistry Lab", tag: "By chemcollective.org" },
     { image: Project03, title: "Virtual Physics Lab", tag: "Branding" },
->>>>>>> 787ae3c8fd84878ce2514b14dfcca776c36f9a21
     { image: Project04, title: "Book art design", tag: "Branding" },
     { image: Project05, title: "Book art design", tag: "Branding" }
 ]
->>>>>>> 9cff6b5be0a61ed1b086d6ec6fa099c0939d67d4
 
 function Projects() {
     const [activeIndex, setActiveIndex] = useState(0);

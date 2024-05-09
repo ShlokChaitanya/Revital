@@ -1,10 +1,26 @@
 .hero {
     /* padding-block-start: calc(var(--section-padding) + 60px); */
+    overflow: hidden;
+    overflow-y: hidden;
+}
+
+.hero-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .hero .container {
     display: grid;
     gap: 70px;
+    overflow: hidden;
+}
+
+.hero-content {
+    z-index: 2;
 }
 
 .hero-text {
@@ -106,7 +122,6 @@
 @media (min-width: 992px) {
     .hero {
         background-image: var(--raisin-black_90);
-        overflow: hidden;
     }
 
     .hero .container {
@@ -121,10 +136,6 @@
     .hero .btn,
     .hero-btn .span {
         flex-shrink: 0;
-    }
-
-    .hero-banner {
-        margin-inline-end: -140px;
     }
 }
 
@@ -141,9 +152,5 @@
 
     .hero .wrapper {
         margin-block-end: auto;
-    }
-
-    .hero-banner {
-        min-width: max-content;
     }
 }
