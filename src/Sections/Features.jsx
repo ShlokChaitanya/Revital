@@ -7,11 +7,16 @@ import { faRocket, faUsers, faHeadset } from '@fortawesome/free-solid-svg-icons'
 function Features() {
   return (
     <section className="section feature" id="feature" aria-label="feature">
+<<<<<<< HEAD
+      <p className="section-subtitle has-before text-center">Lorem, ipsum dolor.</p>
+      <h2 className="h2 section-title text-center">Lorem ipsum dolor sit.<span className="has-before">Lorem, ipsum.</span></h2>
+=======
       <p className="section-subtitle has-before text-center">Who we are</p>
       <h2 className="h2 section-title text-center">More about <span className="has-before">us.</span></h2>
+>>>>>>> 9cff6b5be0a61ed1b086d6ec6fa099c0939d67d4
       <div className="container">
         <figure className="feature-banner">
-          <img src={Images} width="582" height="585" loading="lazy" alt="feature banner" className="w-100"/>
+          <img src={Images} width="582" height="585" loading="lazy" alt="feature banner" className="w-100" />
         </figure>
         <div className="feature-content">
           <ul className="feature-list">
