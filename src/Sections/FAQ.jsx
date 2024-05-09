@@ -11,7 +11,7 @@ function FAQ() {
     };
 
     return (
-        <section className="section FAQ-Frame">
+        <section className="section FAQ-Frame" id="FAQs">
             <div className="container">
                 <p className="section-subtitle has-before text-center">About Us</p>
                 <h2 className="h2 section-title text-center">Some Related <span className="has-before">Questions.</span></h2>
@@ -43,16 +43,16 @@ const faqData = [
         answer: 'We are here to change the perceptions of people over technology and its uses. The vision we have is not about proving someone else\'s ideologies wrong, but to prove ours right.'
     },
     {
-        question: 'How your business benefits from our services?',
-        answer: 'Our Digital marketing services can bring numerous benefits to businesses of all sizes and industries such as Increased visibility, accurate targeting, Increased engagement, Improved analytics, while being cost effective which will enhance customer experiences.'
+        question: 'Which field is your team mainly based in?',
+        answer: 'Our team mainly focuses on the Information Technology. It includes works like GFX, Editing, Hacking, Programming, etc.'
     },
     {
-        question: 'Are web design and SEO related?',
-        answer: 'Yes, web design is closely related to digital marketing. A well-designed website is an essential part of any successful digital marketing strategy.'
+        question: 'When will the AI workspace be opened?',
+        answer: 'As mentioned earlier also, we\'re only grade 11 students, so, we\'ll work on it during our holidays if we\'re not assigned with our academic projects, most probably.'
     },
     {
-        question: 'What services do you offer for small businesses?',
-        answer: 'We offer a range of services tailored for small businesses, including website design, social media marketing, search engine optimization (SEO), pay-per-click advertising (PPC), and more. These services can help small businesses establish a strong online presence and attract their target audience.'
+        question: 'Is this page developed by the crew itself?',
+        answer: 'In short, Yes. We\'ve been assigning the works to the main site-builders Shlok, Arnav and Dhruvansh, which they\'ve been implementing over time and maintining this project.'
     },
     // Add more FAQ items as needed
 ];

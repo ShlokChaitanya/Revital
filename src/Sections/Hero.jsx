@@ -1,9 +1,10 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../Styles/Sections/Hero.css';
 import Spline from '@splinetool/react-spline';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
-import { faSquareFacebook, faYoutube, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faYoutube, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 function Humo({ height }) {
     return (
@@ -25,7 +26,7 @@ function Hero() {
     }, []);
 
     return (
-        <section ref={heroRef} className="section hero" id="home" aria-label="hero">
+        <section ref={heroRef} className="section hero" id="Home" aria-label="hero">
             <div className="container">
                 <figure className="hero-banner"> <Humo height={heroHeight} /> </figure>
                 <div className="hero-content">
@@ -36,22 +37,21 @@ function Hero() {
                         Team Revital is backed up by the students of Class XI - A (PCM), hailing from St. Joseph's School, Greater Noida. This page is the finest display of their skills and creativity.
                     </p>
                     <div className="wrapper">
-                        <a href="https://#" className="btn btn-primary has-before has-after">
-                            How It Works
-                        </a>
+                        <Link to="?scrollTo=Blogs" className="btn btn-primary has-before has-after">
+                            Way to Blogs
+                        </Link>
                         <button className="hero-btn" aria-label="Ignite Vortex promo">
                             <FontAwesomeIcon icon={faPlay} />
-                            <span className="span">Behind the scenes</span>
+                            <span className="span">AI Workspace (soon)</span>
                         </button>
                     </div>
                     <ul className="social-list">
-                        {[
-                            { icon: faSquareFacebook, color: "hsl(241, 77%, 63%)", text: "Facebook" },
-                            { icon: faYoutube, color: "hsl(0, 100%, 50%)", text: "Youtube" },
-                            { icon: faTwitter, color: "hsl(203, 89%, 53%)", text: "Twitter" }
+                        {[{ icon: faInstagram, color: "hsl(241, 77%, 63%)", text: "Arnav", link: "arnxvfr" },
+                            { icon: faInstagram, color: "hsl(0, 100%, 50%)", text: "Shlok", link: "shlokchaitanya" },
+                            { icon: faInstagram, color: "hsl(203, 89%, 53%)", text: "Dhruvansh", link: "justdhruvv._" }
                         ].map((item, index) => (
                             <li key={index}>
-                                <a href="#" className="social-link" style={{ color: item.color }}>
+                                <a href={"https://instagram.com/" + item.link} className="social-link" style={{ color: item.color }}  target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={item.icon} />
                                     <span className="span">{item.text}</span>
                                 </a>
