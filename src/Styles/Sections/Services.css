@@ -37,6 +37,11 @@
     transition: var(--transition-2);
 }
 
+.service-card .card-icon svg {
+    color: hsl(var(--color));
+    font-size: var(--fs-3);
+}
+
 .service-card:is(:hover, :focus-within) .card-icon {
     transform: rotateY(0.5turn);
 }
@@ -67,7 +72,7 @@
 }
 
 .service .link-card ion-icon {
-    color: var(--majorelle-blue);
+    color: hsl(var(--color));
     font-size: 150px;
     transform: rotate(-45deg);
     margin: -25px auto;

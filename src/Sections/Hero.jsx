@@ -1,10 +1,11 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState, lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import '../Styles/Sections/Hero.css';
-import Spline from '@splinetool/react-spline';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
-import { faInstagram, faYoutube, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+
+const Spline = lazy(() => import('@splinetool/react-spline'));
 
 function Humo({ height }) {
     return (
@@ -20,15 +21,25 @@ function Hero() {
     const [heroHeight, setHeroHeight] = useState(0);
 
     useEffect(() => {
-        if (heroRef.current) {
-            setHeroHeight(heroRef.current.clientHeight);
-        }
+        const handleResize = () => {
+            if (heroRef.current) {
+                setHeroHeight(heroRef.current.clientHeight);
+            }
+        };
+
+        handleResize(); // Set initial height
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     return (
         <section ref={heroRef} className="section hero" id="Home" aria-label="hero">
             <div className="container">
-                <figure className="hero-banner"> <Humo height={heroHeight} /> </figure>
+                <figure className="hero-banner">
+                    <Suspense fallback={null}>
+                        <Humo height={heroHeight} />
+                    </Suspense>
+                </figure>
                 <div className="hero-content">
                     <h1 className="h1 hero-title">
                         Welcome to <span className="has-before">Revital</span>, where Quality meets Tech.
@@ -47,11 +58,11 @@ function Hero() {
                     </div>
                     <ul className="social-list">
                         {[{ icon: faInstagram, color: "hsl(241, 77%, 63%)", text: "Arnav", link: "arnxvfr" },
-                            { icon: faInstagram, color: "hsl(0, 100%, 50%)", text: "Shlok", link: "shlokchaitanya" },
-                            { icon: faInstagram, color: "hsl(203, 89%, 53%)", text: "Dhruvansh", link: "justdhruvv._" }
+                        { icon: faInstagram, color: "hsl(0, 100%, 50%)", text: "Shlok", link: "shlokchaitanya" },
+                        { icon: faInstagram, color: "hsl(203, 89%, 53%)", text: "Dhruvansh", link: "justdhruvv._" }
                         ].map((item, index) => (
                             <li key={index}>
-                                <a href={"https://instagram.com/" + item.link} className="social-link" style={{ color: item.color }}  target="_blank" rel="noopener noreferrer">
+                                <a href={"https://instagram.com/" + item.link} className="social-link" style={{ color: item.color }} target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={item.icon} />
                                     <span className="span">{item.text}</span>
                                 </a>
@@ -59,8 +70,8 @@ function Hero() {
                         ))}
                     </ul>
                 </div>
-                {(window.innerWidth > 1000) && <figure className="hero-banner"> <Humo /> </figure>}
-                {true && <figure className="hero-banner"> <Humo /> </figure>}
+                {(window.innerWidth > 1000) && <figure className="hero-banner"> <Suspense fallback={null}><Humo /></Suspense> </figure>}
+                {true && <figure className="hero-banner"> <Suspense fallback={null}><Humo /></Suspense> </figure>}
             </div>
         </section>
     );

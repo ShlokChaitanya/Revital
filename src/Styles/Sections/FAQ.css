@@ -49,7 +49,7 @@
     padding: 10px 0;
 }
 .Question-Toggle.active {
-    color: #0084e9;
+    color: var(--white);
 }
 
 .content.active {

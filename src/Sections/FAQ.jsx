@@ -1,60 +1,69 @@
-import '../Styles/Sections/FAQ.css';
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAdd, faMinus } from '@fortawesome/free-solid-svg-icons';
+import '../Styles/Sections/FAQ.css';
 
-function FAQ() {
+const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(null);
 
     const handleToggle = (index) => {
-        setActiveIndex(index === activeIndex ? null : index);
+        setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
     };
 
     return (
         <section className="section FAQ-Frame" id="FAQs">
             <div className="container">
                 <p className="section-subtitle has-before text-center">About Us</p>
-                <h2 className="h2 section-title text-center">Some Related <span className="has-before">Questions.</span></h2>
+                <h2 className="h2 section-title text-center">
+                    Some Related <span className="has-before">Questions.</span>
+                </h2>
                 <div className="FAQ-Container">
                     {faqData.map((faq, index) => (
-                        <div className="FAQ-Question" key={index}>
-                            <button className={`Question-Toggle ${activeIndex === index ? 'active' : ''}`} onClick={() => handleToggle(index)}>
-                                {faq.question}
-                                <FontAwesomeIcon icon={activeIndex === index ? faMinus : faAdd} />
-                            </button>
-                            <div className={`content ${activeIndex === index ? 'active' : ''}`}>
-                                <p>{faq.answer}</p>
-                            </div>
-                        </div>
+                        <FAQItem key={index} faq={faq} index={index} activeIndex={activeIndex} handleToggle={handleToggle} />
                     ))}
                 </div>
             </div>
         </section>
     );
-}
+};
+
+const FAQItem = React.memo(({ faq, index, activeIndex, handleToggle }) => {
+    const isActive = index === activeIndex;
+
+    return (
+        <div className="FAQ-Question">
+            <button className={`Question-Toggle ${isActive ? 'active' : ''}`} onClick={() => handleToggle(index)}>
+                {faq.question}
+                <FontAwesomeIcon icon={isActive ? faMinus : faAdd} />
+            </button>
+            <div className={`content ${isActive ? 'active' : ''}`}>
+                <p>{faq.answer}</p>
+            </div>
+        </div>
+    );
+});
 
 const faqData = [
     {
-        question: 'Which platforms do you use to carry out all the operations?',
-        answer: 'We have our own dedicated cloud servers to host and deploy the projects. We\'re in sponsored partnership with some leading companies in the IT field, so its going well.'
+        question: 'What platforms do you use for operations?',
+        answer: 'We utilize dedicated cloud servers for hosting and deploying projects, supplemented by strategic partnerships with leading IT companies.'
     },
     {
-        question: 'Why the title "Revital"?',
-        answer: 'We are here to change the perceptions of people over technology and its uses. The vision we have is not about proving someone else\'s ideologies wrong, but to prove ours right.'
+        question: 'What inspired the name "Revital"?',
+        answer: 'The name "Revital" embodies our commitment to reshaping technology perceptions. Our vision focuses on innovation and progress rather than ideological conflict.'
     },
     {
-        question: 'Which field is your team mainly based in?',
-        answer: 'Our team mainly focuses on the Information Technology. It includes works like GFX, Editing, Hacking, Programming, etc.'
+        question: 'What is the primary focus area of your team?',
+        answer: 'Our team specializes in Information Technology, covering diverse domains such as graphic design, video editing, cybersecurity, and programming.'
     },
     {
-        question: 'When will the AI workspace be opened?',
-        answer: 'As mentioned earlier also, we\'re only grade 11 students, so, we\'ll work on it during our holidays if we\'re not assigned with our academic projects, most probably.'
+        question: 'When is the AI workspace expected to launch?',
+        answer: 'Given our current academic commitments as grade 11 students, the AI workspace development will occur during holiday breaks, subject to project prioritization.'
     },
     {
-        question: 'Is this page developed by the crew itself?',
-        answer: 'In short, Yes. We\'ve been assigning the works to the main site-builders Shlok, Arnav and Dhruvansh, which they\'ve been implementing over time and maintining this project.'
+        question: 'Was this page developed internally by the team?',
+        answer: 'Yes, our core team members Shlok, Arnav, and Dhruvansh spearheaded the development and maintenance of this page, ensuring alignment with our project objectives.'
     },
-    // Add more FAQ items as needed
 ];
 
 export default FAQ;

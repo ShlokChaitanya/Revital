@@ -1,24 +1,38 @@
-import React from 'react'
-import { useState } from 'react'
-import '../Styles/Sections/Projects.css'
-import Project01 from '../Assets/Images/project-1.jpg'
-import Project02 from '../Assets/Images/project-2.jpg'
-import Project03 from '../Assets/Images/project-3.jpg'
-import Project04 from '../Assets/Images/project-4.jpg'
-import Project05 from '../Assets/Images/project-5.jpg'
+import React, { useState } from 'react';
+import '../Styles/Sections/Projects.css';
+import Project02 from '../Assets/Images/project-2.jpg';
+import Project03 from '../Assets/Images/project-3.jpg';
+import Project04 from '../Assets/Images/project-4.jpg';
+import Project05 from '../Assets/Images/project-5.jpg';
 
-const ProjectsData = [ 
-    { image: Project02, title: "Virtual Chemistry Lab", tag: "By chemcollective.org" },
-    { image: Project03, title: "Virtual Physics Lab", tag: "Branding" },
-    { image: Project04, title: "Book art design", tag: "Branding" },
-    { image: Project05, title: "Book art design", tag: "Branding" }
-]
+const ChemistryData = [
+    { image: Project02, title: "Standardization of NaOH with a KHP solution: Acid Base Titration", tag: "By chemcollective.org" },
+    { image: Project03, title: " Exploring Oxidation-Reduction Reactions", tag: "By chemcollective.org" },
+    { image: Project04, title: "Strong Acid and Base Problems", tag: "By chemcollective.org" },
+    { image: Project05, title: "Cobalt Chloride and LeChatlier’s Principle", tag: "By chemcollective.org" }
+];
+
+function ProjectCard({ project }) {
+    return (
+        <li className="project-card">
+            <figure className="card-banner img-holder" style={{ "--width": "835", "--height": "429;" }}>
+                <img src={project.image} width="835" height="429" loading="lazy" alt="Virtual Chemistry Lab" className="img-cover" />
+            </figure>
+            <div className="card-content">
+                <h3 className="h3">
+                    <a href="https://chemcollective.org/chem/jsvlab/vlab.html" target="_blank" rel="noopener noreferrer" className="card-title">{project.title}</a>
+                </h3>
+                <a href="https://chemcollective.org/chem/jsvlab/vlab.html" target="_blank" rel="noopener noreferrer" className="card-tag">{project.tag}</a>
+            </div>
+        </li>
+    );
+}
 
 function Projects() {
     const [activeIndex, setActiveIndex] = useState(0);
-
+    
     const handleToggle = (index) => {
-        setActiveIndex(index === activeIndex ? null : index);
+        if (activeIndex !== index) setActiveIndex(index);
     };
 
     return (
@@ -31,31 +45,18 @@ function Projects() {
                 <ul className="filter-list">
                     {['Website Resources', 'Github Projects (soon)', 'iOS App (soon)', '3D Designs (soon)'].map((filter, index) => (
                         <li key={index}>
-                            <button className={`filter-btn ${activeIndex === index ? 'active' : ''}`} onClick={() => handleToggle(index)}> {filter} </button>
+                            <button className={`filter-btn ${activeIndex === index ? 'active' : ''}`} onClick={() => handleToggle(index)} disabled={index !== 0}>{filter}</button>
                         </li>
                     ))}
                 </ul>
                 <ul className="grid-list">
-                    {ProjectsData.map((project, index) => (  
-                        <li key={index} className={activeIndex === index ? 'active' : ''}>
-                            <div className="project-card">
-                                <figure className="card-banner img-holder" style={{ "--width": "835", "--height": "429;" }}>
-                                    <img src={project.image} width="835" height="429" loading="lazy" alt="Virtual Chemistry Lab"
-                                        className="img-cover" />
-                                </figure>
-                                <div className="card-content">
-                                    <h3 className="h3">
-                                        <a href="https://chemcollective.org/vlab/98" target="_blank" className="card-title">{project.title}</a>
-                                    </h3>
-                                    <a href="https://chemcollective.org/vlab/98" target="_blank" className="card-tag">{project.tag}</a>
-                                </div>
-                            </div>
-                        </li>
+                    {ChemistryData.map((project, index) => (
+                        <ProjectCard project={project} key={index} />
                     ))}
                 </ul>
             </div>
         </section>
-    )
+    );
 }
 
-export default Projects
+export default Projects;    

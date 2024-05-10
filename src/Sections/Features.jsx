@@ -1,8 +1,14 @@
-import React from 'react'
-import '../Styles/Sections/Features.css'
-import Images from '../Assets/Images/feature-banner.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRocket, faUsers, faHeadset } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+import '../Styles/Sections/Features.css';
+import Images from '../Assets/Images/feature-banner.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRocket, faUsers, faHeadset } from '@fortawesome/free-solid-svg-icons';
+
+const FeaturesData = [
+  { icon: faUsers, color: "174, 77%, 50%", title: "A Crew of Students", text: "We are a group of Science Students in Grade 11, aiming to showcase our passion globally." },
+  { icon: faRocket, color: "241, 77%, 63%", title: "Project Sphere", text: "We work on collaborative, as well as on our individual projects to keep up with the portfolio." },
+  { icon: faHeadset, color: "343, 98%, 60%", title: "Specialized", text: "Our career choices are already defined by the theme of this page, which is, The IT Hub." }
+];
 
 function Features() {
   return (
@@ -15,26 +21,24 @@ function Features() {
         </figure>
         <div className="feature-content">
           <ul className="feature-list">
-            {[{ icon: faUsers, color: "174, 77%, 50%", title: "A Crew of Students", text: "We are a group of Science Students in Grade 11, aiming to showcase our passion globally." }, { icon: faRocket, color: "241, 77%, 63%", title: "Project Sphere", text: "We work on collaborative, as well as on our individual projects to keep up with the portfolio." }, { icon: faHeadset, color: "343, 98%, 60%", title: "Specialized", text: "Our career choices are already defined by the theme of this page, which is, The IT Hub." }].map((item, index) => {
-              return (
-                <li key={index}>
-                  <div className="feature-card">
-                    <div className="card-icon" style={{ "--color": item.color }}>
-                      <FontAwesomeIcon icon={item.icon} />
-                    </div>
-                    <div>
-                      <h3 className="h3 card-title">{item.title}</h3>
-                      <p className="card-text"> {item.text} </p>
-                    </div>
+            {FeaturesData.map((item, index) => (
+              <li key={index}>
+                <div className="feature-card">
+                  <div className="card-icon" style={{ "--color": item.color }}>
+                    <FontAwesomeIcon icon={item.icon} />
                   </div>
-                </li>
-              )
-            })}
+                  <div>
+                    <h3 className="h3 card-title">{item.title}</h3>
+                    <p className="card-text">{item.text}</p>
+                  </div>
+                </div>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Features
+export default Features;

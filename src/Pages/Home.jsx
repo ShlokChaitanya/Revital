@@ -1,21 +1,20 @@
-import React from 'react'
-import Features from '../Sections/Features'
-import NewsLetters from '../Sections/NewsLetters'
-import Projects from '../Sections/Projects'
-import Services from '../Sections/Services'
-import Hero from '../Sections/Hero'
-import Blogs from '../Sections/Blogs'
-import FAQ from '../Sections/FAQ'
-import { useEffect } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
-import Testimonials from '../Sections/Testimonials'
+import React, { useEffect, Suspense } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+
+const Features = React.lazy(() => import('../Sections/Features'));
+const NewsLetters = React.lazy(() => import('../Sections/NewsLetters'));
+const Projects = React.lazy(() => import('../Sections/Projects'));
+const Services = React.lazy(() => import('../Sections/Services'));
+const Hero = React.lazy(() => import('../Sections/Hero'));
+const Blogs = React.lazy(() => import('../Sections/Blogs'));
+const FAQ = React.lazy(() => import('../Sections/FAQ'));
+const Testimonials = React.lazy(() => import('../Sections/Testimonials'));
 
 function Home() {
     const location = useLocation();
     const navigate = useNavigate();
 
     useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }) }, []);
-
     useEffect(() => {
         const urlParams = new URLSearchParams(location.search);
         const scrollTo = urlParams.get('scrollTo');
@@ -30,16 +29,18 @@ function Home() {
 
     return (
         <>
-            <Hero />
-            <Services />
-            <Features />
-            <FAQ />
-            <Testimonials />
-            <Projects />
-            <NewsLetters />
-            <Blogs />
+            <Suspense fallback={null}>
+                {/* <Hero /> */}
+                <Services />
+                <Features />
+                <FAQ />
+                <Testimonials />
+                <Projects />
+                <NewsLetters />
+                <Blogs />
+            </Suspense>
         </>
-    )
+    );
 }
 
-export default Home
+export default Home;
