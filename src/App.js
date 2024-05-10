@@ -24,8 +24,8 @@ function App() {
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/Terms&Services" element={<Terms />} />
         <Route path="/Terms&Conditions" element={<Terms />} />
-        <Route path="/Refund-Policy" element={<Refund />} />
-        <Route path="/Shipping-Policy" element={<Shipping />} />
+        {/* <Route path="/Refund-Policy" element={<Refund />} />
+        <Route path="/Shipping-Policy" element={<Shipping />} /> */}
         <Route path="/Blogs" element={<OurBlogs />} />
         <Route path="*" element={<Home />} />
       </Routes>

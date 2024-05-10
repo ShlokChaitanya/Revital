@@ -1,9 +1,9 @@
-import React, { useRef, useEffect, useState, lazy, Suspense } from 'react';
-import { Link } from 'react-router-dom';
 import '../Styles/Sections/Hero.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import React, { useRef, useEffect, useState, lazy, Suspense } from 'react';
 
 const Spline = lazy(() => import('@splinetool/react-spline'));
 
@@ -82,13 +82,13 @@ function Hero() {
                         ))}
                     </ul>
                 </div>
-                {window.innerWidth > 1000 && (
+                {/* {window.innerWidth > 1000 && (
                     <figure className="hero-banner">
                         <Suspense fallback={<div>Loading...</div>}>
                             <Humo />
                         </Suspense>
                     </figure>
-                )}
+                )} */}
             </div>
         </section>
     );
