@@ -40,7 +40,7 @@ function Footer() {
             <div className="container">
                 <div className="footer-top section">
                     <div className="footer-brand">
-                        <p className="footer-list-title">Revital 2024.</p>
+                        <p className="footer-list-title">Team Revital To The Moon.</p>
                         <p className="footer-text">
                             This is the 2nd version of Team Revital.
                             Initial version was released in December 2022.
