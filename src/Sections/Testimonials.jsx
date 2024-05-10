@@ -2,6 +2,7 @@ import React from 'react'
 import image1 from '../Assets/dp/hardaksh.webp'
 import image2 from '../Assets/dp/anant.webp'
 import image3 from '../Assets/dp/raunak.webp'
+
 import '../Styles/Sections/Testimonials.css'
 
 const testimonials = [
