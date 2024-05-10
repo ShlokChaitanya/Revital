@@ -3,12 +3,7 @@ import '../Styles/Pages/Terms.css'
 import { useEffect } from 'react'
 
 function Terms() {
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  }, [])
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }) }, []);
 
   return (
     <div className='policiy-frame'>
@@ -18,7 +13,7 @@ function Terms() {
           <ol>
             <li>
               <h2>Acceptance of Terms:</h2>
-              <p>These Terms and Conditions ("Terms") govern your use of the <cname>Revital</cname> online platform ("Platform"), provided by Ignite Vortex Inc. ("Ignite Vortex ", "we," or "us"). By accessing or using the Platform, you agree to be bound by these Terms. If you do not agree with these Terms, you should not use the Platform.</p>
+              <p>These Terms and Conditions ("Terms") govern your use of the <cname>Revital</cname> online platform ("Platform"), provided by Revital. ("Revital", "we," or "us"). By accessing or using the Platform, you agree to be bound by these Terms. If you do not agree with these Terms, you should not use the Platform.</p>
             </li>
             <li>
               <h2>Use of the Platform:</h2>
@@ -51,11 +46,11 @@ function Terms() {
             </li>
             <li>
               <h2>Content Ownership:</h2>
-              <p>Ignite Vortex does not claim ownership of any content you submit or upload to the Platform. However, by using the Platform, you grant Ignite Vortex a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, adapt, publish, distribute, and display your content for the purpose of operating and improving the Platform.</p>
+              <p>Revital I do not claim ownership of any content you submit or upload to the Platform. However, by using the Platform, you grant Revital a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, adapt, publish, distribute, and display your content for the purpose of operating and improving the Platform.</p>
             </li>
             <li>
               <h2>Termination:</h2>
-              <p>Ignite Vortex reserves the right to suspend or terminate your access to the Platform at any time, without notice, for any reason, including but not limited to a violation of these Terms.</p>
+              <p>Revital reserves the right to suspend or terminate your access to the Platform at any time, without notice, for any reason, including but not limited to a violation of these Terms.</p>
             </li>
             <li>
               <h2>Community Guidelines:</h2>
@@ -67,7 +62,7 @@ function Terms() {
                   <p><strong>User Content: </strong>You are solely responsible for any content you post, upload, or transmit on the Platform. You agree not to post any content that is illegal, defamatory, or violates the rights of others.</p>
                 </li>
                 <li>
-                  <p><strong>Moderation: </strong>Ignite Vortex reserves the right to moderate user-generated content and may remove or edit any content that violates these Terms or is otherwise objectionable.</p>
+                  <p><strong>Moderation: </strong>Revital reserves the right to moderate user-generated content and may remove or edit any content that violates these Terms or is otherwise objectionable.</p>
                 </li>
               </ol>
             </li>
@@ -75,10 +70,10 @@ function Terms() {
               <h2>Disclaimer of Warranty and Limitation of Liability:</h2>
               <ol>
                 <li>
-                  <p><strong>No Warranty: </strong>The Platform is provided on an "as is" and "as available" basis, without warranties of any kind, either express or implied. Ignite Vortex disclaims all warranties, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+                  <p><strong>No Warranty: </strong>The Platform is provided on an "as is" and "as available" basis, without warranties of any kind, either express or implied. Revital disclaims all warranties, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
                 </li>
                 <li>
-                  <p><strong>Limitation of Liability: </strong>In no event shall Ignite Vortex be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or in connection with the use of the Platform, whether based on contract, tort, strict liability, or any other legal theory, even if advised of the possibility of such damages.</p>
+                  <p><strong>Limitation of Liability: </strong>In no event shall Revital be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or in connection with the use of the Platform, whether based on contract, tort, strict liability, or any other legal theory, even if advised of the possibility of such damages.</p>
                 </li>
               </ol>
             </li>
@@ -86,10 +81,10 @@ function Terms() {
               <h2>Intellectual Property Rights:</h2>
               <ol>
                 <li>
-                  <p><strong>Trademarks: </strong>The Ignite Vortex name, logo, and any other Ignite Vortex trademarks or service marks are the property of Ignite Vortex Inc. You may not use any Ignite Vortex trademarks without prior written permission.</p>
+                  <p><strong>Trademarks: </strong>The Revital name, logo, and any other Revital trademarks or service marks are the property of Revital Inc. You may not use any Revital trademarks without prior written permission.</p>
                 </li>
                 <li>
-                  <p><strong>Copyright: </strong>The Platform and its content, including but not limited to text, graphics, images, and software, are protected by copyright laws and other intellectual property rights. You may not reproduce, modify, distribute, or display any portion of the Platform without prior written permission from Ignite Vortex.</p>
+                  <p><strong>Copyright: </strong>The Platform and its content, including but not limited to text, graphics, images, and software, are protected by copyright laws and other intellectual property rights. You may not reproduce, modify, distribute, or display any portion of the Platform without prior written permission from Revital.</p>
                 </li>
               </ol>
             </li>
@@ -102,14 +97,14 @@ function Terms() {
             </li>
             <li>
               <h2>Modifications: </h2>
-              <p>Ignite Vortex reserves the right to modify these Terms at any time without prior notice. The updated Terms will be posted on the Platform, and your continued use of the Platform after the modifications will constitute your acceptance of the updated Terms.</p>
+              <p>Revital reserves the right to modify these Terms at any time without prior notice. The updated Terms will be posted on the Platform, and your continued use of the Platform after the modifications will constitute your acceptance of the updated Terms.</p>
             </li>
             <li>
               <h2>Contact :</h2>
-              <p>If you have any questions or concerns about these Terms and Conditions, please contact us at <a href="mailto:Support@ignitevortex.com" className="email-link">Support@ignitevortex.com</a>.</p>
+              <p>If you have any questions or concerns about these Terms and Conditions, please contact us at <a href="mailto:contact@revital.tech" className="email-link">contact@revital.tech</a>.</p>
             </li>
           </ol>
-          <p>By using the Ignite Vortex online platform, you acknowledge that you have read, understood, and agreed to these Terms and Conditions</p>
+          <p>By using the Revital online platform, you acknowledge that you have read, understood, and agreed to these Terms and Conditions</p>
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@ const socialLinks = [
 
 const Links = [
     { name: 'Contact us', link: '/ContactUs' },
-    { name: 'How it Works', link: '/' },
+    { name: 'Project', link: '/?scrollTo=Project' },
     { name: 'Create', link: '/' },
     { name: 'Explore', link: '/' },
     { name: 'Terms & Services', link: '/Terms&Services' }
@@ -21,7 +21,6 @@ const Links = [
 
 const Community = [
     { name: 'Help Center', link: '/ContactUs' },
-    { name: 'Partners', link: '/Partners' },
     { name: 'Suggestions', link: '/ContactUs' },
     { name: 'Blog', link: '/?scrollTo=blog' },
     { name: 'Newsletters', link: '/?scrollTo=newsletter' }
@@ -59,7 +58,7 @@ function Footer() {
                     </div>
                     <div className="footer-brand">
                         <p className="footer-list-title">Address</p>
-                        <p className="footer-text">Alpha I, Greater Noida,<br />  Uttar Pradesh -</p>
+                        <p className="footer-text">Alpha I, Greater Noida,<br />  Uttar Pradesh - 201310</p>
                     </div>
                     <ul className="footer-list">
                         <li> <p className="footer-list-title">Usefull Links</p> </li>
