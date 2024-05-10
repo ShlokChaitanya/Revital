@@ -2,20 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../Styles/Components/Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faSkype, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const socialLinks = [
-    { name: 'logo-youtube', icon: faYoutube },
-    { name: 'logo-twitter', icon: faTwitter },
-    { name: 'logo-facebook', icon: faFacebook },
-    { name: 'logo-skype', icon: faSkype }
+    { name: 'logo-github', icon: faGithub, link: 'https://github.com/arnavos/revital' }
 ];
 
 const Links = [
-    { name: 'Contact us', link: '/ContactUs' },
-    { name: 'Project', link: '/?scrollTo=Project' },
-    { name: 'Create', link: '/' },
-    { name: 'Explore', link: '/' },
+    { name: 'Mail us', link: 'mailto:contact@revital.tech' },
+    { name: 'Projects', link: '/?scrollTo=Project' },
     { name: 'Terms & Services', link: '/Terms&Services' }
 ];
 
@@ -29,8 +24,8 @@ const Community = [
 const Policys = [
     { name: 'Terms & Conditions', link: '/Terms&Conditions' },
     { name: 'Privacy Policy', link: '/PrivacyPolicy' },
-    { name: 'Refund Policy', link: '/Refund-Policy' },
-    { name: 'Shipping Policy', link: '/Shipping-Policy' }
+    //{ name: 'Refund Policy', link: '/Refund-Policy' },
+    //{ name: 'Shipping Policy', link: '/Shipping-Policy' }
 ];
 
 function Footer() {
@@ -61,7 +56,7 @@ function Footer() {
                         <p className="footer-text">Alpha I, Greater Noida,<br />  Uttar Pradesh - 201310</p>
                     </div>
                     <ul className="footer-list">
-                        <li> <p className="footer-list-title">Usefull Links</p> </li>
+                        <li> <p className="footer-list-title">Add-ons</p> </li>
                         {Links.map((item, index) => {
                             return (
                                 <li key={index}>
