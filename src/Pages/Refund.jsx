@@ -3,12 +3,7 @@ import { useEffect } from 'react'
 import '../Styles/Pages/Terms.css'
 
 function Refund() {
-    useEffect(() => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    }, [])
+    useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }) }, [])
 
     return (
         <div className='policiy-frame'>

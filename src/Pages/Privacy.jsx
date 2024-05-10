@@ -1,14 +1,9 @@
 import React from 'react'
-import '../Styles/Pages/Terms.css'
 import { useEffect } from 'react'
+import '../Styles/Pages/Terms.css'
 
 function PrivacyPolicy() {
-    useEffect(() => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    }, [])
+    useEffect(() => { window.scrollTo({ behavior: 'smooth' }) }, [])
 
     return (
         <div className='policiy-frame'>
@@ -19,7 +14,7 @@ function PrivacyPolicy() {
                         <li>
                             <h2>Introduction</h2>
                             <p>
-                                <cname>Ignite Vortex </cname>("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, disclose, and protect your personal information. By accessing our website [IgniteVortex.com] or using our services, you consent to the practices described in this Privacy Policy.
+                                <cname>Revital </cname>("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, disclose, and protect your personal information. By accessing our website [Revital.tech] or using our services, you consent to the practices described in this Privacy Policy.
                             </p>
                         </li>
                         <li>
@@ -131,7 +126,7 @@ function PrivacyPolicy() {
                         </li>
                         <li>
                             <h2>Contact Us:</h2>
-                            <p>If you have any questions or concerns about these Terms and Conditions, please contact us at <a href="mailto:Support@ignitevortex.com" className="email-link">Support@ignitevortex.com</a>.</p>
+                            <p>If you have any questions or concerns about these Terms and Conditions, please contact us at <a href="mailto:contact@revital.tech" className="email-link">contact@revital.tech</a>.</p>
                         </li>
                     </ol>
                     <p>By accessing or using the Service, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.</p>
