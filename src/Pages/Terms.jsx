@@ -18,7 +18,7 @@ function Terms() {
           <ol>
             <li>
               <h2>Acceptance of Terms:</h2>
-              <p>These Terms and Conditions ("Terms") govern your use of the <cname>Ignite Vortex</cname> online platform ("Platform"), provided by Ignite Vortex Inc. ("Ignite Vortex ", "we," or "us"). By accessing or using the Platform, you agree to be bound by these Terms. If you do not agree with these Terms, you should not use the Platform.</p>
+              <p>These Terms and Conditions ("Terms") govern your use of the <cname>Revital</cname> online platform ("Platform"), provided by Ignite Vortex Inc. ("Ignite Vortex ", "we," or "us"). By accessing or using the Platform, you agree to be bound by these Terms. If you do not agree with these Terms, you should not use the Platform.</p>
             </li>
             <li>
               <h2>Use of the Platform:</h2>

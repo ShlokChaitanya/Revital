@@ -1,17 +1,20 @@
 import React from 'react'
+import image1 from '../Assets/dp/image.webp'
+import image2 from '../Assets/dp/IMG_20240509_200100.webp'
+import image3 from '../Assets/dp/IMG_20240429_232229.jpg'
 import '../Styles/Sections/Testimonials.css'
 
 const testimonials = [
-    { id: 1, name: 'Daniel Clifford', status: 'Tech Visionary', title: 'Transformative Learning Experience!', quote: 'Enrolling in the bootcamp was the best decision I ever made. The curriculum was cutting-edge, and the instructors were incredibly knowledgeable. The real-world projects pushed me out of my comfort zone and prepared me for the challenges of the tech industry. I landed my dream job as a Software Engineer shortly after completing the course.' },
-    { id: 2, name: 'Jonathan Walters', status: 'Coding Enthusiast', title: 'Empowering Journey into Tech', quote: 'From a novice to a mobile engineer, all thanks to this bootcamp. The support from the mentors was exceptional. They kept me motivated through the tough times. The practical approach to learning made all the difference. I can confidently say that this investment transformed my career.' },
-    { id: 3, name: 'Jeanette Harmon', status: 'Tech Trailblazer', title: 'Unparalleled Career Shift', quote: 'Joining this bootcamp was a turning point in my life. The comprehensive curriculum equipped me with the skills demanded by the industry. The dedicated staff provided guidance at every step. I transitioned to a fulfilling tech role, and Im enjoying every moment of it.' },
-    { id: 4, name: 'Patrick Abrams', status: 'Code Connoisseur', title: 'Excellence in Teaching and Support', quote: 'Exceptional support from experienced TAs who have been through the same journey. Their insights were invaluable. This program instilled the confidence I needed to step into the tech world. The community is outstanding – youll receive personalized attention and connect with brilliant minds.' },
+    { id: 1, name: 'Tanay Srivastava', status: 'Data Analyst', title: 'Life-Changing Experience!', quote: 'Participating in this bootcamp was a game-changer for me. The curriculum was dynamic, and the instructors were top-notch. The hands-on projects challenged me and helped me grow my skills tremendously. Thanks to this program, I secured a fantastic job as a web developer and am thriving in my career.', image: image1 },
+    { id: 2, name: 'Dhruvansh Tripathi', status: 'Web Developer', title: 'A Journey of Growth', quote: 'From a beginner to a tech enthusiast, this bootcamp has been a remarkable journey. The mentors provided invaluable support and guidance throughout. The practical approach to learning allowed me to apply what I learned in real-world scenarios. I am now confident in my abilities and excited to pursue opportunities in the tech industry.', image: image2 },
+    { id: 3, name: 'Shlok Chaitanya', status: 'Tech  Innovator', title: 'Empowering Transformation', quote: 'Attending this bootcamp was the best decision I made for my career. The comprehensive curriculum and dedicated instructors helped me develop a strong foundation in software engineering. The collaborative environment fostered growth and allowed me to network with like-minded individuals. I am grateful for the skills and connections I gained through this program.', image: image3 },
+    { id: 4, name: 'Arnav Singh', status: 'AI Expert', title: 'Excellence in Education', quote: 'Exceptional teaching and support from knowledgeable instructors who are passionate about what they do. Their insights were invaluable in helping me navigate the complexities of the tech industry. This program equipped me with the skills and confidence to pursue my passion for technology. The supportive community provided encouragement and inspiration along the way.' },
 ];
 
 
 function Testimonials() {
     return (
-        <section className="section testimonial" id="testimonial" aria-label="feature">
+        <section className="section testimonial" id="Testimonials" aria-label="feature">
             <div class="container">
                 <p className="section-subtitle has-before text-center">Meet The Keepers!</p>
                 <h2 className="h2 section-title text-center">It's Great To Listen From Our <span className="has-before">Homies.</span></h2>
@@ -19,7 +22,7 @@ function Testimonials() {
                     {testimonials.map((testimonial) => (
                         <div className="testimonial-card" key={testimonial.id}>
                             <div className="testimonial-header">
-                                <img src={`https://assets.codepen.io/5126815/image-${testimonial.name.toLowerCase().split(' ')[0]}.jpg`} alt={testimonial.name} className="avatar" />
+                                <img src={testimonial.image} alt={testimonial.name} className="avatar" />
                                 <div className="details">
                                     <div className="name">{testimonial.name}</div>
                                     <div className="status">{testimonial.status}</div>

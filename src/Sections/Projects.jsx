@@ -22,7 +22,7 @@ function Projects() {
     };
 
     return (
-        <section className="section project" id="project" aria-label="project">
+        <section className="section project" id="Projects" aria-label="project">
             <div className="container">
                 <p className="section-subtitle has-before text-center">Useful Resources</p>
                 <h2 className="h2 section-title text-center">

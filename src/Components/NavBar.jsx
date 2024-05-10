@@ -31,7 +31,7 @@ function NavBar() {
                         </button>
                     </div>
                     <ul className="navbar-list">
-                        {['Lorem', 'Lorem', 'Lorem', 'Lorem'].map((item, index) => {
+                        {['Home', 'Features', 'FAQs', 'Testimonials', 'Projects'].map((item, index) => {
                             return (
                                 <li className="navbar-item" key={index} onClick={() => {setNavActive(false)}}>
                                     <Link to={`/?scrollTo=${item}`} className="navbar-link" data-nav-link>{item}</Link>
@@ -43,7 +43,7 @@ function NavBar() {
                 <button className="nav-open-btn" aria-label="open menu">
                     <FontAwesomeIcon icon={faBars} onClick={toggleNavbar} />
                 </button>
-                <Link to="/ContactUs" className="btn btn-primary has-before has-after">Let’s Talk 👋</Link>
+                <Link to="https://discord.gg/VcP6kaGGCB" className="btn btn-primary has-before has-after" target="_blank" rel="noopener noreferrer" >Join Discord!</Link>
                 <div className={`overlay ${isNavActive ? 'active' : ''}`} onClick={toggleNavbar}></div>
             </div>
         </header>

@@ -16,7 +16,7 @@ const blogs = [
 
 function Blogs() {
     return (
-        <section className="section blog" id="blog" aria-label="blog">
+        <section className="section blog" id="Blogs" aria-label="blog">
             <div className="container">
                 <p className="section-subtitle text-center has-before">Blog Post</p>
                 <h2 className="h2 section-title text-center">
