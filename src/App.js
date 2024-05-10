@@ -6,9 +6,7 @@ import Terms from './Pages/Terms';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PrivacyPolicy from './Pages/Privacy';
 import ContactUs from './Pages/ContactUs';
-import Refund from './Pages/Refund';
 import { useEffect } from 'react';
-import Shipping from './Pages/Shipment';
 import OurBlogs from './Pages/OurBlogs';
 // import Cu from './Pages/CU';
 
@@ -24,8 +22,6 @@ function App() {
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/Terms&Services" element={<Terms />} />
         <Route path="/Terms&Conditions" element={<Terms />} />
-        <Route path="/Refund-Policy" element={<Refund />} />
-        <Route path="/Shipping-Policy" element={<Shipping />} />
         <Route path="/Blogs" element={<OurBlogs />} />
         <Route path="*" element={<Home />} />
       </Routes>

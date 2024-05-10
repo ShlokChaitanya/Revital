@@ -30,7 +30,7 @@ function Home() {
     return (
         <>
             <Suspense fallback={null}>
-                {/* <Hero /> */}
+                <Hero />
                 <Services />
                 <Features />
                 <FAQ />
