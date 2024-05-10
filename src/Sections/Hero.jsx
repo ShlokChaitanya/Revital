@@ -7,6 +7,18 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const Spline = lazy(() => import('@splinetool/react-spline'));
 
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
 function Humo({ height }) {
     return (
         <Spline
@@ -21,11 +33,11 @@ function Hero() {
     const [heroHeight, setHeroHeight] = useState(0);
 
     useEffect(() => {
-        const handleResize = () => {
+        const handleResize = debounce(() => {
             if (heroRef.current) {
                 setHeroHeight(heroRef.current.clientHeight);
             }
-        };
+        }, 250);
 
         handleResize(); // Set initial height
         window.addEventListener('resize', handleResize);
@@ -36,7 +48,7 @@ function Hero() {
         <section ref={heroRef} className="section hero" id="Home" aria-label="hero">
             <div className="container">
                 <figure className="hero-banner">
-                    <Suspense fallback={null}>
+                    <Suspense fallback={<div>Loading...</div>}>
                         <Humo height={heroHeight} />
                     </Suspense>
                 </figure>
@@ -70,8 +82,13 @@ function Hero() {
                         ))}
                     </ul>
                 </div>
-                {(window.innerWidth > 1000) && <figure className="hero-banner"> <Suspense fallback={null}><Humo /></Suspense> </figure>}
-                {true && <figure className="hero-banner"> <Suspense fallback={null}><Humo /></Suspense> </figure>}
+                {window.innerWidth > 1000 && (
+                    <figure className="hero-banner">
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <Humo />
+                        </Suspense>
+                    </figure>
+                )}
             </div>
         </section>
     );
