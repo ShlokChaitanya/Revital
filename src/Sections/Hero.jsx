@@ -82,13 +82,13 @@ function Hero() {
                         ))}
                     </ul>
                 </div>
-                {/* {window.innerWidth > 1000 && (
+                {window.innerWidth > 1000 && (
                     <figure className="hero-banner">
                         <Suspense fallback={<div>Loading...</div>}>
                             <Humo />
                         </Suspense>
                     </figure>
-                )} */}
+                )}
             </div>
         </section>
     );
