@@ -2,9 +2,16 @@ import './App.css';
 import Cu from './Pages/CU';
 import Home from './Pages/Home';
 import Terms from './Pages/Terms';
+<<<<<<< HEAD
 import { useEffect } from 'react';
 // import Refund from './Pages/Refund';
 // import Shipping from './Pages/Shipment';
+=======
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import PrivacyPolicy from './Pages/Privacy';
+import ContactUs from './Pages/ContactUs';
+import { useEffect } from 'react';
+>>>>>>> f6fef20120f67a4028f616a8f52910ca36fc04c8
 import OurBlogs from './Pages/OurBlogs';
 import NavBar from './Components/NavBar';
 import Footer from './Components/Footer';

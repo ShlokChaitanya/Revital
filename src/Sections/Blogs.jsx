@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import { collection, query, orderBy, limit, getDocs } from 'firebase/firestore';
 
+<<<<<<< HEAD
 async function fetchBlogData() {
     try {
         const q = query(collection(db, 'blogs'), orderBy('date', 'desc'), limit(4));
@@ -17,6 +18,14 @@ async function fetchBlogData() {
         return [];
     }
 }
+=======
+const blogs = [
+    { id: 1, title: 'Godaddy user flow solution...', image: Blog01, tag: 'Development', date: 'July 26, 2023', text: 'At Ignite Vortex we specialize in designing, building, shipping and scaling beautifu. At Ignite Vortex we specialize in designing, building, shipping and scaling beautiful.' },
+    { id: 2, title: 'Godaddy user flow solution for every individual', image: Blog02, tag: 'Development', date: 'July 26, 2023', text: 'At Ignite Vortex we specialize in designing, building, shipping and scaling beautifu. At Ignite Vortex we specialize in designing, building, shipping and scaling beautiful.' },
+    { id: 3, title: 'Business solution for every individual', image: Blog03, tag: 'Development', date: 'July 26, 2023', text: 'At Ignite Vortex we specialize in designing, building, shipping and scaling beautifu. At Ignite Vortex we specialize in designing, building, shipping and scaling beautiful.' },
+    { id: 4, title: 'How to start your own e-commerce store online?', image: Blog04, tag: 'Development', date: 'Soon.', text: 'Stay tuned.' },
+];
+>>>>>>> f6fef20120f67a4028f616a8f52910ca36fc04c8
 
 function Blogs() {
     const [blogs, setBlogs] = useState([]);
@@ -34,9 +43,9 @@ function Blogs() {
     return (
         <section className="section blog" id="Blogs" aria-label="blog">
             <div className="container">
-                <p className="section-subtitle text-center has-before">Blog Post</p>
+                <p className="section-subtitle text-center has-before">Blogs!</p>
                 <h2 className="h2 section-title text-center">
-                    Popular <span className="has-before">blog post</span>
+                    Our <span className="has-before">Blog Posts.</span>
                 </h2>
                 {loading ? (
                     <div>Loading...</div>

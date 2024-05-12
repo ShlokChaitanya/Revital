@@ -44,7 +44,24 @@ function Hero() {
                             <span className="span">AI Workspace (soon)</span>
                         </button>
                     </div>
+<<<<<<< HEAD
                     <ul className="social-list">{socialData.map(renderSocialLinks)}</ul>
+=======
+                    <ul className="social-list">
+                        {[{ icon: faInstagram, color: "hsl(241, 77%, 63%)", text: "Arnav", link: "arnxvfr" },
+                        { icon: faInstagram, color: "hsl(0, 100%, 50%)", text: "Shlok", link: "shlokchaitanya" },
+                        { icon: faInstagram, color: "hsl(203, 89%, 53%)", text: "Dhruvansh", link: "justdhruvv._" },
+                        { icon: faInstagram, color: "hsl(203, 89%, 53%)", text: "Raunak", link: "aintraunak" }
+                        ].map((item, index) => (
+                            <li key={index}>
+                                <a href={"https://instagram.com/" + item.link} className="social-link" style={{ color: item.color }} target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={item.icon} />
+                                    <span className="span">{item.text}</span>
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+>>>>>>> f6fef20120f67a4028f616a8f52910ca36fc04c8
                 </div>
                 {window.innerWidth > 1000 && (
                     <figure className="hero-banner">

@@ -46,7 +46,7 @@ function Terms() {
             </li>
             <li>
               <h2>Content Ownership:</h2>
-              <p>Revital I does not claim ownership of any content you submit or upload to the Platform. However, by using the Platform, you grant Revital a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, adapt, publish, distribute, and display your content for the purpose of operating and improving the Platform.</p>
+              <p>Revital I do not claim ownership of any content you submit or upload to the Platform. However, by using the Platform, you grant Revital a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, adapt, publish, distribute, and display your content for the purpose of operating and improving the Platform.</p>
             </li>
             <li>
               <h2>Termination:</h2>

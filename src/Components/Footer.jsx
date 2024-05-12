@@ -22,7 +22,12 @@ const Community = [
     { name: 'Our Blogs', link: '/?scrollTo=Blogs' },
     { name: 'Help Center', link: '/HelpCenter' },
     { name: 'Suggestions', link: '/ContactUs' },
+<<<<<<< HEAD
     { name: 'Newsletters', link: '/?scrollTo=Newsletter' }
+=======
+    { name: 'Blog', link: '/?scrollTo=blogs' },
+    { name: 'Newsletters', link: '/?scrollTo=newsletter' }
+>>>>>>> f6fef20120f67a4028f616a8f52910ca36fc04c8
 ];
 
 const Policies = [
