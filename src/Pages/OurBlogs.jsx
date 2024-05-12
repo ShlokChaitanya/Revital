@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import '../Styles/Pages/OurBlogs.css';
 import { db } from '../Scripts/FireBase.js';
 import { useParams } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useNavigate } from 'react-router-dom';
 import { doc, getDoc } from 'firebase/firestore';
+import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faCalendarAlt, faComment } from '@fortawesome/free-solid-svg-icons';
 
 function OurBlogs() {
@@ -13,14 +13,11 @@ function OurBlogs() {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        fetchBlogData();
-    }, [blogId]);
+    useEffect(() => { fetchBlogData(); window.scrollTo({ top: 0, behavior: 'smooth' }) }, [blogId]);
 
     async function fetchBlogData() {
         try {
-            const docRef = doc(db, "blogs", blogId);
-            const fdata = await getDoc(docRef);
+            const fdata = await getDoc(doc(db, "blogs", blogId));
             if (fdata.exists()) {
                 setData(fdata.data());
             } else {

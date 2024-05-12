@@ -13,7 +13,7 @@ const FAQ = () => {
     return (
         <section className="section FAQ-Frame" id="FAQs">
             <div className="container">
-                <p className="section-subtitle has-before text-center">About Us</p>
+                <p className="section-subtitle has-before text-center">Frequently Asked Questions</p>
                 <h2 className="h2 section-title text-center">
                     Some Related <span className="has-before">Questions.</span>
                 </h2>
