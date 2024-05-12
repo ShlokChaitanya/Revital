@@ -17,7 +17,7 @@ const Links = [
 const Community = [
     { name: 'Help Center', link: '/ContactUs' },
     { name: 'Suggestions', link: '/ContactUs' },
-    { name: 'Blog', link: '/?scrollTo=blog' },
+    { name: 'Blog', link: '/?scrollTo=blogs' },
     { name: 'Newsletters', link: '/?scrollTo=newsletter' }
 ];
 
