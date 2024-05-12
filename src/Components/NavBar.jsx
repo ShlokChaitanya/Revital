@@ -60,7 +60,7 @@ function NavBar() {
                     <FontAwesomeIcon icon={faBars} onClick={toggleNavbar} />
                 </button>
                 <Suspense fallback={null}>
-                    {location.pathname === "/" && <LazyDiscordButton />}
+                    <LazyDiscordButton />
                 </Suspense>
                 <div className={`overlay ${isNavActive ? 'active' : ''}`} onClick={toggleNavbar}></div>
             </div>

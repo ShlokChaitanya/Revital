@@ -5,16 +5,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRocket, faUsers, faHeadset } from '@fortawesome/free-solid-svg-icons';
 
 const FeaturesData = [
-  { icon: faUsers, color: "174, 77%, 50%", title: "A Crew of Students", text: "We are a group of Science Students in Grade 11, aiming to showcase our passion globally." },
-  { icon: faRocket, color: "241, 77%, 63%", title: "Project Sphere", text: "We work on collaborative, as well as on our individual projects to keep up with the portfolio." },
-  { icon: faHeadset, color: "343, 98%, 60%", title: "Specialized", text: "Our career choices are already defined by the theme of this page, which is, The IT Hub." }
+  { icon: faUsers, color: "174, 77%, 50%", title: "Dynamic Student Team", text: "We're Grade 11 Science Students, driven to share our passion globally." },
+  { icon: faRocket, color: "241, 77%, 63%", title: "Project Diversity", text: "From collaboration to individual projects, we keep our portfolio dynamic." },
+  { icon: faHeadset, color: "343, 98%, 60%", title: "Specialized Expertise", text: "Our career choices align with The IT Hub theme, showcasing our expertise." }
 ];
+
 
 function Features() {
   return (
     <section className="section feature" id="Features" aria-label="feature">
-      <p className="section-subtitle has-before text-center">Who we are</p>
-      <h2 className="h2 section-title text-center">More about <span className="has-before">us.</span></h2>
+      <p className="section-subtitle has-before text-center">Discover Our Story</p>
+      <h2 className="h2 section-title text-center">Navigate Through Our <span className="has-before">Noteworthy</span> Features</h2>
       <div className="container">
         <figure className="feature-banner">
           <img src={Images} width="582" height="585" loading="lazy" alt="feature banner" className="w-100" />

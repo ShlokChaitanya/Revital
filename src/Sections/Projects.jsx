@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import '../Styles/Sections/Projects.css';
+import Project01 from '../Assets/Images/project-1.jpg';
 import Project02 from '../Assets/Images/project-2.jpg';
 import Project03 from '../Assets/Images/project-3.jpg';
 import Project04 from '../Assets/Images/project-4.jpg';
 import Project05 from '../Assets/Images/project-5.jpg';
 
 const ChemistryData = [
+    { image: Project01, title: "Determining the solubility of copper chloride", tag: "By chemcollective.org"},
     { image: Project02, title: "Standardization of NaOH with a KHP solution: Acid Base Titration", tag: "By chemcollective.org" },
-    { image: Project03, title: " Exploring Oxidation-Reduction Reactions", tag: "By chemcollective.org" },
+    { image: Project03, title: "Exploring Oxidation-Reduction Reactions", tag: "By chemcollective.org" },
     { image: Project04, title: "Strong Acid and Base Problems", tag: "By chemcollective.org" },
     { image: Project05, title: "Cobalt Chloride and LeChatlier’s Principle", tag: "By chemcollective.org" }
 ];
@@ -16,7 +18,7 @@ function ProjectCard({ project }) {
     return (
         <li className="project-card">
             <figure className="card-banner img-holder" style={{ "--width": "835", "--height": "429;" }}>
-                <img src={project.image} width="835" height="429" loading="lazy" alt="Virtual Chemistry Lab" className="img-cover" />
+                <img src={project.image} loading="lazy" alt="Virtual Chemistry Lab" className="img-cover" />
             </figure>
             <div className="card-content">
                 <h3 className="h3">

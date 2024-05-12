@@ -1,77 +1,65 @@
-import React from 'react'
-import { useState, useEffect } from "react"
+import "../Styles/Pages/ContactUs.css"
 import { useNavigate } from "react-router-dom";
+import { doc, setDoc } from "firebase/firestore";
+import React, { useState, useEffect } from "react";
+import { db, generateToken } from "../Scripts/FireBase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons"
-import { doc, setDoc } from "firebase/firestore";
-import { db, generateToken } from "../Scripts/FireBase";
-import "../Styles/Pages/ContactUs.css"
 
 function ContactUs() {
     const [credentials, setCredentials] = useState({});
     const [errors, setErrors] = useState({});
     const navigate = useNavigate();
-    useEffect(() => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    }, [])
+    
+    useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }) }, [])
 
-    const handleInputChange = (event, field) => {
+    function handleInputChange(event, field) {
         setCredentials((prevCredentials) => ({
             ...prevCredentials,
             [field]: event.target.value,
         }));
+        
         setErrors((prevErrors) => ({
             ...prevErrors,
             [`${field}ErrorMessage`]: '',
         }));
     };
 
-    const register = async (event) => {
+    async function register(event){
         event.preventDefault();
         try {
-            const patternMap = {
-                fNamePattern: /^[A-Za-z]+$/,
-                lNamePattern: /^[A-Za-z]+$/,
-                phoneNumberPattern: /^[0-9]{10}$/,
-                emailPattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-            };
+            const patternMap = { fNamePattern: /^[A-Za-z]+$/, lNamePattern: /^[A-Za-z]+$/, phoneNumberPattern: /^[0-9]{10}$/, emailPattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ };
+            
             ["fName", "lName", "message", "email", "phoneNumber"].forEach((field) => {
                 const patternKey = `${field}Pattern`;
                 if (!credentials[field] || !credentials[field].trim().length > 3) {
-                    setErrors((prevErrors) => ({
-                        ...prevErrors,
-                        [`${field}ErrorMessage`]: `Please enter your`,
-                    }));
+                    setErrors((prevErrors) => ({ ...prevErrors, [`${field}ErrorMessage`]: `Please enter your` }));
                     return;
-                } else  if (patternMap.hasOwnProperty(patternKey)) {
+
+                } else if (patternMap.hasOwnProperty(patternKey)) {
                     const pattern = patternMap[patternKey];
+
                     if (!pattern.test(credentials[field])) {
-                        setErrors((prevErrors) => ({
-                            ...prevErrors,
-                            [`${field}ErrorMessage`]: `Please enter a valid`,
-                        }));
+                        setErrors((prevErrors) => ({ ...prevErrors, [`${field}ErrorMessage`]: `Please enter a valid` }));
                         return;
                     }
                 } 
             })
+            
             const contactId = await generateToken();
+            
             const contactData = {
                 email: credentials.email, username: `${credentials.fName + " " + credentials.lName}`,
                 contactId: contactId, phoneNumber: credentials.phoneNumber,
                 createdAt: new Date().toISOString(),
             };
+            
             setDoc(doc(db, "ContactUs", contactId), contactData).then(() => {
                 alert('Form submitted successfully.');
                 setCredentials({});
-            }).catch((error) => {
-                console.error('Error writing document: ', error);
-            });
-        } catch (error) {
-            console.log(error);
-        }
+            }).catch((error) => { console.error('Error writing document: ', error) });
+
+        } catch (error) { console.log(error) }
     };
     return (
         <div className="Contact-Us-Frame">
@@ -138,14 +126,7 @@ function ContactUs() {
                     </div>
                     <div className="input-group">
                         <div className="input-box">
-                            <input
-                                type="tel"
-                                value={credentials.phoneNumber}
-                                onChange={(event) =>
-                                    handleInputChange(event, "phoneNumber")
-                                }
-                                required
-                            />
+                            <input type="tel" value={credentials.phoneNumber} onChange={(event) => handleInputChange(event, "phoneNumber") } required />
                             <label htmlFor="password">Phone Number*</label>
                         </div>
                         {errors.phoneNumberErrorMessage && (
@@ -156,17 +137,11 @@ function ContactUs() {
                         )}
                     </div>
                 </div>
-                <button className="submit-btn" onClick={register}>
-                    Submit Now
-                </button>
+                <button className="submit-btn" onClick={register}> Submit Now </button>
                 <div className="Terms-Conditions-Box">
                     By Submitting You Are Accepting Our
-                    <conditions onClick={() => navigate("/Terms&Conditions")}>
-                        Terms & Conditions
-                    </conditions> And
-                    <conditions className="Conditions-text" onClick={() => navigate("/PrivacyPolicy")}>
-                        Privacy Policy
-                    </conditions>.
+                    <conditions onClick={() => navigate("/Terms&Conditions")}> Terms & Conditions </conditions> And
+                    <conditions onClick={() => navigate("/PrivacyPolicy")}> Privacy Policy </conditions>.
                 </div>
             </div>
         </div>
